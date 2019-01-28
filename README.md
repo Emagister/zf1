@@ -1,5 +1,8 @@
 ![Logo](http://framework.zend.com/images/logos/ZendFramework-logo.png)
 
+Zend Framework 1.12.20 Emagister Clone
+======================================
+
 > ## End-of-Life occurred 28 Sep 2016
 >
 > This project is no longer maintained, and reached its end of life on 28 Sep

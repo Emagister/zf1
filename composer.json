@@ -1,6 +1,6 @@
 {
-    "name": "zendframework/zendframework1",
-    "description": "Zend Framework 1",
+    "name": "emagister/zf1",
+    "description": "Zend Framework 1.12.20 Emagister Clone",
     "type": "library",
     "keywords": [
         "framework",
