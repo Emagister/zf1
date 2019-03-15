@@ -1408,18 +1408,18 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<months>
 					<monthContext type="format">
 						<monthWidth type="abbreviated">
-							<month type="1">ene.</month>
-							<month type="2">feb.</month>
-							<month type="3">mar.</month>
-							<month type="4">abr.</month>
-							<month type="5">may.</month>
-							<month type="6">jun.</month>
-							<month type="7">jul.</month>
-							<month type="8">ago.</month>
-							<month type="9">sept.</month>
-							<month type="10">oct.</month>
-							<month type="11">nov.</month>
-							<month type="12">dic.</month>
+							<month type="1">ene</month>
+							<month type="2">feb</month>
+							<month type="3">mar</month>
+							<month type="4">abr</month>
+							<month type="5">may</month>
+							<month type="6">jun</month>
+							<month type="7">jul</month>
+							<month type="8">ago</month>
+							<month type="9">sept</month>
+							<month type="10">oct</month>
+							<month type="11">nov</month>
+							<month type="12">dic</month>
 						</monthWidth>
 						<monthWidth type="narrow">
 							<month type="1">E</month>
@@ -1452,18 +1452,18 @@ For terms of use, see http://www.unicode.org/copyright.html
 					</monthContext>
 					<monthContext type="stand-alone">
 						<monthWidth type="abbreviated">
-							<month type="1">Ene.</month>
-							<month type="2">Feb.</month>
-							<month type="3">Mar.</month>
-							<month type="4">Abr.</month>
-							<month type="5">May.</month>
-							<month type="6">Jun.</month>
-							<month type="7">Jul.</month>
-							<month type="8">Ago.</month>
-							<month type="9">Sept.</month>
-							<month type="10">Oct.</month>
-							<month type="11">Nov.</month>
-							<month type="12">Dic.</month>
+							<month type="1">Ene</month>
+							<month type="2">Feb</month>
+							<month type="3">Mar</month>
+							<month type="4">Abr</month>
+							<month type="5">May</month>
+							<month type="6">Jun</month>
+							<month type="7">Jul</month>
+							<month type="8">Ago</month>
+							<month type="9">Sept</month>
+							<month type="10">Oct</month>
+							<month type="11">Nov</month>
+							<month type="12">Dic</month>
 						</monthWidth>
 						<monthWidth type="narrow">
 							<month type="1">E</month>
@@ -1498,13 +1498,13 @@ For terms of use, see http://www.unicode.org/copyright.html
 				<days>
 					<dayContext type="format">
 						<dayWidth type="abbreviated">
-							<day type="sun">dom.</day>
-							<day type="mon">lun.</day>
-							<day type="tue">mar.</day>
-							<day type="wed">mié.</day>
-							<day type="thu">jue.</day>
-							<day type="fri">vie.</day>
-							<day type="sat">sáb.</day>
+							<day type="sun">dom</day>
+							<day type="mon">lun</day>
+							<day type="tue">mar</day>
+							<day type="wed">mié</day>
+							<day type="thu">jue</day>
+							<day type="fri">vie</day>
+							<day type="sat">sáb</day>
 						</dayWidth>
 						<dayWidth type="narrow">
 							<day type="sun">D</day>
@@ -1536,13 +1536,13 @@ For terms of use, see http://www.unicode.org/copyright.html
 					</dayContext>
 					<dayContext type="stand-alone">
 						<dayWidth type="abbreviated">
-							<day type="sun">Dom.</day>
-							<day type="mon">Lun.</day>
-							<day type="tue">Mar.</day>
-							<day type="wed">Mié.</day>
-							<day type="thu">Jue.</day>
-							<day type="fri">Vie.</day>
-							<day type="sat">Sáb.</day>
+							<day type="sun">Dom</day>
+							<day type="mon">Lun</day>
+							<day type="tue">Mar</day>
+							<day type="wed">Mié</day>
+							<day type="thu">Jue</day>
+							<day type="fri">Vie</day>
+							<day type="sat">Sáb</day>
 						</dayWidth>
 						<dayWidth type="narrow">
 							<day type="sun">D</day>
