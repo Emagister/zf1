@@ -101,23 +101,4 @@ class Zend_Reflection_Parameter extends ReflectionParameter
         unset($phpReflection);
         return $zendReflection;
     }
-
-    /**
-     * Get parameter type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        if ($docblock = $this->getDeclaringFunction()->getDocblock()) {
-            $params = $docblock->getTags('param');
-
-            if (isset($params[$this->getPosition()])) {
-                return $params[$this->getPosition()]->getType();
-            }
-
-        }
-
-        return null;
-    }
 }

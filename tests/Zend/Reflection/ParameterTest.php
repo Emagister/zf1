@@ -73,7 +73,7 @@ class Zend_Reflection_ParameterTest extends PHPUnit_Framework_TestCase
     public function testTypeReturn($param, $type)
     {
         $parameter = new Zend_Reflection_Parameter(array('Zend_Reflection_TestSampleClass5', 'doSomething'), $param);
-        $this->assertEquals($parameter->getType(), $type);
+        $this->assertEquals($parameter->getType()->getName(), $type);
     }
 
     public function paramTypeTestProvider()

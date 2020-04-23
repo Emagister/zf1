@@ -225,7 +225,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      * Similar to the reset() function for arrays in PHP.
      * Required by interface Iterator.
      *
-     * @return Zend_Db_Table_Rowset_Abstract Fluent interface.
+     * @return void Fluent interface.
      */
     public function rewind()
     {
@@ -303,7 +303,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      * Required by interface SeekableIterator.
      *
      * @param int $position the position to seek to
-     * @return Zend_Db_Table_Rowset_Abstract
+     * @return void
      * @throws Zend_Db_Table_Rowset_Exception
      */
     public function seek($position)

@@ -152,7 +152,7 @@ class Zend_View_Helper_Cycle implements Iterator
     /**
      * Move to next value
      *
-     * @return Zend_View_Helper_Cycle
+     * @return void
      */
     public function next()
     {
@@ -195,7 +195,7 @@ class Zend_View_Helper_Cycle implements Iterator
     /**
      * Rewind pointer
      *
-     * @return Zend_View_Helper_Cycle
+     * @return void
      */
     public function rewind()
     {

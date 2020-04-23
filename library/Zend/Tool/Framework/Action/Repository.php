@@ -128,7 +128,7 @@ class Zend_Tool_Framework_Action_Repository
     /**
      * getIterator() - get all actions, this supports the IteratorAggregate interface
      *
-     * @return array
+     * @return Traversable
      */
     public function getIterator()
     {

@@ -86,7 +86,7 @@ class Zend_Controller_Action_HelperBroker_PriorityStack implements IteratorAggre
     /**
      * Return something iterable
      *
-     * @return array
+     * @return Traversable
      */
     public function getIterator()
     {
@@ -97,7 +97,7 @@ class Zend_Controller_Action_HelperBroker_PriorityStack implements IteratorAggre
      * offsetExists()
      *
      * @param int|string $priorityOrHelperName
-     * @return Zend_Controller_Action_HelperBroker_PriorityStack
+     * @return bool
      */
     public function offsetExists($priorityOrHelperName)
     {
@@ -133,7 +133,7 @@ class Zend_Controller_Action_HelperBroker_PriorityStack implements IteratorAggre
      *
      * @param int $priority
      * @param Zend_Controller_Action_Helper_Abstract $helper
-     * @return Zend_Controller_Action_HelperBroker_PriorityStack
+     * @return void
      */
     public function offsetSet($priority, $helper)
     {
@@ -170,7 +170,7 @@ class Zend_Controller_Action_HelperBroker_PriorityStack implements IteratorAggre
      * offsetUnset()
      *
      * @param int|string $priorityOrHelperName Priority integer or the helper name
-     * @return Zend_Controller_Action_HelperBroker_PriorityStack
+     * @return void
      */
     public function offsetUnset($priorityOrHelperName)
     {

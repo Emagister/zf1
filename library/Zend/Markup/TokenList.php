@@ -95,7 +95,7 @@ class Zend_Markup_TokenList implements RecursiveIterator
     /**
      * Go to the next token
      *
-     * @return Zend_Markup_Token
+     * @return void
      */
     public function next()
     {
@@ -115,7 +115,7 @@ class Zend_Markup_TokenList implements RecursiveIterator
     /**
      * Check if the element is valid
      *
-     * @return void
+     * @return bool
      */
     public function valid()
     {

@@ -195,8 +195,6 @@ class Zend_Tool_Project_Profile_Iterator_ContextFilter extends RecursiveFilterIt
      *
      * This is here due to a bug/design issue in PHP
      * @link
-     *
-     * @return unknown
      */
     function getChildren()
     {

@@ -349,7 +349,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
     /**
      * next() - required by RecursiveIterator
      *
-     * @return bool
+     * @return void
      */
     public function next()
     {
@@ -359,7 +359,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
     /**
      * rewind() - required by RecursiveIterator
      *
-     * @return bool
+     * @return void
      */
     public function rewind()
     {
@@ -389,7 +389,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
     /**
      * getChildren()
      *
-     * @return array
+     * @return $this
      */
     public function getChildren()
     {

@@ -127,7 +127,7 @@ class Zend_Queue_Message_PlatformJob extends Zend_Queue_Message
      */
     public function __sleep()
     {
-        return serialize('_job', '_id', '_data');
+        return array('_job', '_id', '_data');
     }
 
     /**

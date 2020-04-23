@@ -193,7 +193,12 @@ class Zend_Feed_Element implements ArrayAccess
         if ($length == 1) {
             return new Zend_Feed_Element($nodes[0]);
         } elseif ($length > 1) {
-            return array_map(create_function('$e', 'return new Zend_Feed_Element($e);'), $nodes);
+            return array_map(
+                function ($element) {
+                    return new Zend_Feed_Element($element);
+                },
+                $nodes
+            );
         } else {
             // When creating anonymous nodes for __set chaining, don't
             // call appendChild() on them. Instead we pass the current
@@ -402,7 +407,7 @@ class Zend_Feed_Element implements ArrayAccess
      *
      * @param  string $offset
      * @param  string $value
-     * @return string
+     * @return void
      */
     public function offsetSet($offset, $value)
     {
@@ -422,7 +427,7 @@ class Zend_Feed_Element implements ArrayAccess
      * Required by the ArrayAccess interface.
      *
      * @param  string $offset
-     * @return boolean
+     * @return void
      */
     public function offsetUnset($offset)
     {
