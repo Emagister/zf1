@@ -293,7 +293,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return $this->_count;
     }
