@@ -122,7 +122,7 @@ class Zend_Service_Rackspace_Files_ObjectList implements Countable, Iterator, Ar
      *
      * @return Zend_Service_Rackspace_Files_Object
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->objects[$this->iteratorKey];
     }

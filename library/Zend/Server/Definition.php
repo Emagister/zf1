@@ -220,7 +220,7 @@ class Zend_Server_Definition implements Countable, Iterator
      *
      * @return mixed
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_methods);
     }

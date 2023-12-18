@@ -210,7 +210,7 @@ implements Iterator, Countable
      *
      * @return Zend_Feed_Reader_Entry_Interface
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->_entries[$this->key()];
     }

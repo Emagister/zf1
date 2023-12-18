@@ -99,7 +99,7 @@ class Zend_Cloud_Infrastructure_ImageList implements Countable, Iterator, ArrayA
      *
      * @return Image
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->images[$this->iteratorKey];
     }

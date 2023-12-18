@@ -144,7 +144,7 @@ class Zend_Dom_Query_Result implements Iterator,Countable
      *
      * @return DOMElement
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->_nodeList->item($this->_position);
     }

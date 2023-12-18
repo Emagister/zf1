@@ -119,7 +119,7 @@ class Zend_Service_Rackspace_Servers_SharedIpGroupList implements Countable, Ite
      *
      * @return Zend_Service_Rackspace_Servers_SharedIpGroup
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->shared[$this->iteratorKey];
     }

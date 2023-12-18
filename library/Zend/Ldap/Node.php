@@ -1069,7 +1069,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
      *
      * @return array
      */
-    public function current()
+    public function current(): mixed
     {
         return $this;
     }

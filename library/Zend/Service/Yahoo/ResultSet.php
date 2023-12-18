@@ -121,7 +121,7 @@ class Zend_Service_Yahoo_ResultSet implements SeekableIterator
      * @throws Zend_Service_Exception
      * @return Zend_Service_Yahoo_Result
      */
-    public function current()
+    public function current(): mixed
     {
         /**
          * @see Zend_Service_Exception

@@ -563,7 +563,7 @@ class Zend_Mail_Part implements RecursiveIterator, Zend_Mail_Part_Interface
      *
      * @return Zend_Mail_Part current part
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->getPart($this->_iterationPos);
     }

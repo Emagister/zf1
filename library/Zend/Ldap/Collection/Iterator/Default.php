@@ -189,7 +189,7 @@ class Zend_Ldap_Collection_Iterator_Default implements Iterator, Countable
      * @return array|null
      * @throws Zend_Ldap_Exception
      */
-    public function current()
+    public function current(): mixed
     {
         if (!is_resource($this->_current)) {
             $this->rewind();

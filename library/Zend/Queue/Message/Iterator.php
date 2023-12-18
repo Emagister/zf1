@@ -224,7 +224,7 @@ class Zend_Queue_Message_Iterator implements Iterator, Countable
      *
      * @return Zend_Queue_Message current element from the collection
      */
-    public function current()
+    public function current(): mixed
     {
         return (($this->valid() === false)
             ? null

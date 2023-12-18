@@ -218,7 +218,7 @@ class Zend_View_Helper_Cycle implements Iterator
      *
      * @return mixed
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->_data[$this->_name][$this->key()];
     }

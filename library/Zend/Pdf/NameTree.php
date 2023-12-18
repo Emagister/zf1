@@ -85,7 +85,7 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
         }
     }
 
-    public function current()
+    public function current(): mixed
     {
         return current($this->_items);
     }

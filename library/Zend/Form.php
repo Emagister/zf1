@@ -3272,7 +3272,7 @@ class Zend_Form implements Iterator, Countable, Zend_Validate_Interface
      * @throws Zend_Form_Exception
      * @return Zend_Form_Element|Zend_Form_DisplayGroup|Zend_Form
      */
-    public function current()
+    public function current(): mixed
     {
         $this->_sort();
         current($this->_order);

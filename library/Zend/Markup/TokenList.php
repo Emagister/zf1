@@ -45,7 +45,7 @@ class Zend_Markup_TokenList implements RecursiveIterator
      *
      * @return Zend_Markup_Token
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_tokens);
     }

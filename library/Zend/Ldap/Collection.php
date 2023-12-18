@@ -132,7 +132,7 @@ class Zend_Ldap_Collection implements Iterator, Countable
      * @return array|null
      * @throws Zend_Ldap_Exception
      */
-    public function current()
+    public function current(): mixed
     {
         if ($this->count() > 0) {
             if ($this->_current < 0) {

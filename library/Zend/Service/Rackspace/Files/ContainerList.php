@@ -106,7 +106,7 @@ class Zend_Service_Rackspace_Files_ContainerList implements Countable, Iterator,
      *
      * @return Zend_Service_Rackspace_Files_Container
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->objects[$this->iteratorKey];
     }

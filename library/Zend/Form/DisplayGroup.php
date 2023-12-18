@@ -1046,7 +1046,7 @@ class Zend_Form_DisplayGroup implements Iterator,Countable
      *
      * @return Zend_Form_Element
      */
-    public function current()
+    public function current(): mixed
     {
         $this->_sort();
         current($this->_elementOrder);

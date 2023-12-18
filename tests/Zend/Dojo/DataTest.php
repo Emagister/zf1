@@ -554,7 +554,7 @@ class Zend_Dojo_DataTest_DataCollection implements Iterator
         }
     }
 
-    public function current()
+    public function current(): mixed
     {
         return current($this->items);
     }

@@ -173,7 +173,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      *
      * @return Zend_Service_Delicious_SimplePost
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->_posts[$this->_iteratorKey];
     }

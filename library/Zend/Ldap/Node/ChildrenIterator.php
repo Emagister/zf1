@@ -71,7 +71,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      *
      * @return Zend_Ldap_Node
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_data);
     }

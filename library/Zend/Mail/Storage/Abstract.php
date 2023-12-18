@@ -302,7 +302,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       *
       * @return   Zend_Mail_Message current message
       */
-     public function current()
+     public function current(): mixed
      {
         return $this->getMessage($this->_iterationPos);
      }

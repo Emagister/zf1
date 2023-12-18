@@ -464,7 +464,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      *
      * @return array
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_items);
     }

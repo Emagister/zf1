@@ -110,7 +110,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * 
          * @return mixed
          */
-        public function current()
+        public function current(): mixed
         {
             if (!$this->stack) {
                 $this->rewind();

@@ -146,7 +146,7 @@ abstract class Zend_Feed_Reader_FeedAbstract implements Zend_Feed_Reader_FeedInt
      *
      * @return Zend_Feed_Reader_EntryInterface
      */
-    public function current()
+    public function current(): mixed
     {
         if (substr($this->getType(), 0, 3) == 'rss') {
             $reader = new Zend_Feed_Reader_Entry_Rss($this->_entries[$this->key()], $this->key(), $this->getType());

@@ -123,7 +123,7 @@ class Zend_Service_Flickr_ResultSet implements SeekableIterator
      *
      * @return Zend_Service_Flickr_Result
      */
-    public function current()
+    public function current(): mixed
     {
         return new Zend_Service_Flickr_Result($this->_results->item($this->_currentIndex), $this->_flickr);
     }

@@ -106,7 +106,7 @@ class Zend_Service_Amazon_ResultSet implements SeekableIterator
      *
      * @return Zend_Service_Amazon_Item
      */
-    public function current()
+    public function current(): mixed
     {
         return new Zend_Service_Amazon_Item($this->_results->item($this->_currentIndex));
     }

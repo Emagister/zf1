@@ -149,7 +149,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      *
      * @return mixed The current row, or null if no rows.
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->_entry[$this->_entryIndex];
     }

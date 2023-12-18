@@ -100,7 +100,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      *
      * @return Instance
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->instances[$this->iteratorKey];
     }

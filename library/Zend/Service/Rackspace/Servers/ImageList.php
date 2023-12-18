@@ -119,7 +119,7 @@ class Zend_Service_Rackspace_Servers_ImageList implements Countable, Iterator, A
      *
      * @return Zend_Service_Rackspace_Servers_Image
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->images[$this->iteratorKey];
     }

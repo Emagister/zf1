@@ -126,7 +126,7 @@ class Zend_Mail_Storage_Folder implements RecursiveIterator
      *
      * @return Zend_Mail_Storage_Folder current folder
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_folders);
     }

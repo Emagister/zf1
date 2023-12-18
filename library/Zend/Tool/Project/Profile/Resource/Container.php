@@ -331,7 +331,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
      *
      * @return Zend_Tool_Project_Profile_Resource
      */
-    public function current()
+    public function current(): mixed
     {
         return current($this->_subResources);
     }

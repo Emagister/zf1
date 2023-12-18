@@ -120,7 +120,7 @@ class Zend_Service_Rackspace_Servers_ServerList implements Countable, Iterator, 
      *
      * @return Zend_Service_Rackspace_Servers_Server
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->servers[$this->iteratorKey];
     }

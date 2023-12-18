@@ -509,7 +509,7 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
      * @return Zend_Navigation_Page       current page or null
      * @throws Zend_Navigation_Exception  if the index is invalid
      */
-    public function current()
+    public function current(): mixed
     {
         $this->_sort();
         current($this->_index);

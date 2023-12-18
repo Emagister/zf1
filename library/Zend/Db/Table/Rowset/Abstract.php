@@ -240,7 +240,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @return Zend_Db_Table_Row_Abstract current element from the collection
      */
-    public function current()
+    public function current(): mixed
     {
         if ($this->valid() === false) {
             return null;
