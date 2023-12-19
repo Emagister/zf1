@@ -103,7 +103,7 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     }
 
 
-    public function valid() {
+    public function valid(): bool {
         return current($this->_items)!==false;
     }
 

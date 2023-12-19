@@ -339,7 +339,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          *
          * @return bool
          */
-        public function valid()
+        public function valid(): bool
         {
             $key = key($this->stack);
             $var = ($key !== null && $key !== false);

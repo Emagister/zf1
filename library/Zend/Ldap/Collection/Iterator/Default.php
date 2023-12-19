@@ -301,7 +301,7 @@ class Zend_Ldap_Collection_Iterator_Default implements Iterator, Countable
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return (is_resource($this->_current));
     }

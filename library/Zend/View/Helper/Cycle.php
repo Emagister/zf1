@@ -207,7 +207,7 @@ class Zend_View_Helper_Cycle implements Iterator
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return isset($this->_data[$this->_name][$this->key()]);
     }

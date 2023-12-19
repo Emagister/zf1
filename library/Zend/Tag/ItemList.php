@@ -168,7 +168,7 @@ class Zend_Tag_ItemList implements Countable, SeekableIterator, ArrayAccess
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return ($this->current() !== false);
     }

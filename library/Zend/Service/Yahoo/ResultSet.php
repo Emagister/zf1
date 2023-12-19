@@ -188,7 +188,7 @@ class Zend_Service_Yahoo_ResultSet implements SeekableIterator
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->_currentIndex < $this->_results->length;
     }

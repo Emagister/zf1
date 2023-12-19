@@ -571,7 +571,7 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $this->_sort();
         return current($this->_index) !== false;

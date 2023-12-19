@@ -163,7 +163,7 @@ class Zend_Service_Rackspace_Servers_ImageList implements Countable, Iterator, A
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $numItems = $this->count();
         if ($numItems > 0 && $this->iteratorKey < $numItems) {

@@ -112,7 +112,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return (current($this->_data)!==false);
     }

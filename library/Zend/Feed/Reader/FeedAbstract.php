@@ -256,7 +256,7 @@ abstract class Zend_Feed_Reader_FeedAbstract implements Zend_Feed_Reader_FeedInt
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return 0 <= $this->_entriesKey && $this->_entriesKey < $this->count();
     }

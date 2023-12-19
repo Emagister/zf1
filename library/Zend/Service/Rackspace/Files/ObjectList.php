@@ -166,7 +166,7 @@ class Zend_Service_Rackspace_Files_ObjectList implements Countable, Iterator, Ar
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $numItems = $this->count();
         if ($numItems > 0 && $this->iteratorKey < $numItems) {

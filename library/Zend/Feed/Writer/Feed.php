@@ -250,7 +250,7 @@ implements Iterator, Countable
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return 0 <= $this->_entriesKey && $this->_entriesKey < $this->count();
     }

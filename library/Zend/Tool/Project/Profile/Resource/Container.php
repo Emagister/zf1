@@ -371,7 +371,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return (bool) $this->current();
     }

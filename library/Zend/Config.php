@@ -301,7 +301,7 @@ class Zend_Config implements Countable, Iterator
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->_index < $this->_count;
     }

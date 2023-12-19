@@ -96,7 +96,7 @@ class Zend_Mail_Storage_Folder implements RecursiveIterator
      *
      * @return bool check if there's a current element
      */
-    public function valid()
+    public function valid(): bool
     {
         return key($this->_folders) !== null;
     }

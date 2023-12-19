@@ -131,7 +131,7 @@ class Zend_Dom_Query_Result implements Iterator,Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         if (in_array($this->_position, range(0, $this->_nodeList->length - 1)) && $this->_nodeList->length > 0) {
             return true;

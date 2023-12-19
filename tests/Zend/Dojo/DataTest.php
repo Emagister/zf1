@@ -574,7 +574,7 @@ class Zend_Dojo_DataTest_DataCollection implements Iterator
         return reset($this->items);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return (bool) $this->current();
     }

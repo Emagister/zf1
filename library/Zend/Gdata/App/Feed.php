@@ -179,7 +179,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      *
      * @return boolean Whether the iteration is valid
      */
-    public function valid()
+    public function valid(): bool
     {
         return 0 <= $this->_entryIndex && $this->_entryIndex < $this->count();
     }

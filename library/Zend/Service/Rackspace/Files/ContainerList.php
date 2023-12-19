@@ -150,7 +150,7 @@ class Zend_Service_Rackspace_Files_ContainerList implements Countable, Iterator,
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $numItems = $this->count();
         if ($numItems > 0 && $this->iteratorKey < $numItems) {

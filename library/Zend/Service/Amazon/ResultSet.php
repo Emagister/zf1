@@ -163,7 +163,7 @@ class Zend_Service_Amazon_ResultSet implements SeekableIterator
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return null !== $this->_results && $this->_currentIndex < $this->_results->length;
     }

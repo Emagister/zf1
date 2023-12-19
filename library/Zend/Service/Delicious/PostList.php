@@ -221,7 +221,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $numItems = $this->count();
 

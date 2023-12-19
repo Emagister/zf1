@@ -260,7 +260,7 @@ class Zend_Server_Definition implements Countable, Iterator
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return (bool) $this->current();
     }

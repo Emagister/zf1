@@ -335,7 +335,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       *
       * @return   boolean
       */
-     public function valid()
+     public function valid(): bool
      {
         if ($this->_iterationMax === null) {
           $this->_iterationMax = $this->countMessages();

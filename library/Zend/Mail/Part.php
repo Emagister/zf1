@@ -530,7 +530,7 @@ class Zend_Mail_Part implements RecursiveIterator, Zend_Mail_Part_Interface
      *
      * @return bool check if there's a current element
      */
-    public function valid()
+    public function valid(): bool
     {
         if ($this->_countParts === null) {
             $this->countParts();

@@ -281,7 +281,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @return bool False if there's nothing more to iterate over
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->_pointer >= 0 && $this->_pointer < $this->_count;
     }

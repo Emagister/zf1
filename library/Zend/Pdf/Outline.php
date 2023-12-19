@@ -331,7 +331,7 @@ abstract class Zend_Pdf_Outline implements RecursiveIterator, Countable
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         return current($this->childOutlines) !== false;
     }

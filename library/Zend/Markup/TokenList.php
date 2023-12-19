@@ -117,7 +117,7 @@ class Zend_Markup_TokenList implements RecursiveIterator
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->current() !== false;
     }

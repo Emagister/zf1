@@ -431,7 +431,7 @@ class Zend_View_Helper_PartialLoop_IteratorTest implements Iterator
         return reset($this->items);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return (current($this->items) !== false);
     }
@@ -477,7 +477,7 @@ class Zend_View_Helper_PartialLoop_RecursiveIteratorTest implements Iterator
         return reset($this->items);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return (current($this->items) !== false);
     }
@@ -534,7 +534,7 @@ class Zend_View_Helper_PartialLoop_IteratorWithToArrayTest implements Iterator
         return reset($this->items);
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return (current($this->items) !== false);
     }

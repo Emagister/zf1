@@ -504,7 +504,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         return (bool) $this->current();
     }

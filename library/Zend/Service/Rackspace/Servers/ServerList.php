@@ -164,7 +164,7 @@ class Zend_Service_Rackspace_Servers_ServerList implements Countable, Iterator, 
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $numItems = $this->count();
         if ($numItems > 0 && $this->iteratorKey < $numItems) {

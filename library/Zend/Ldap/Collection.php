@@ -228,7 +228,7 @@ class Zend_Ldap_Collection implements Iterator, Countable
      *
      * @return boolean
      */
-    public function valid()
+    public function valid(): bool
     {
         if (isset($this->_cache[$this->_current])) {
             return true;

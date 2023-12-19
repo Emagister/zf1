@@ -1092,7 +1092,7 @@ class Zend_Form_DisplayGroup implements Iterator,Countable
      *
      * @return bool
      */
-    public function valid()
+    public function valid(): bool
     {
         $this->_sort();
         return (current($this->_elementOrder) !== false);
