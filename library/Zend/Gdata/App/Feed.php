@@ -228,7 +228,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      * @param Zend_Gdata_App_Entry $value The value to set
      * @return void
      */
-    public function offsetSet($key, $value)
+    public function offsetSet($key, $value): void
     {
         $this->_entry[$key] = $value;
     }

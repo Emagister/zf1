@@ -191,7 +191,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      * @param  mixed $value
      * @return null
      */
-    public function offsetSet($name, $value) { }
+    public function offsetSet($name, $value): void { }
 
     /**
      * Get all children as an array

@@ -409,16 +409,16 @@ class Zend_Feed_Element implements ArrayAccess
      * @param  string $value
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->ensureAppended();
 
         if (strpos($offset, ':') !== false) {
             list($ns, $attr) = explode(':', $offset, 2);
             // DOMElement::setAttributeNS() requires $qualifiedName to have a prefix
-            return $this->_element->setAttributeNS(Zend_Feed::lookupNamespace($ns), $offset, $value);
+            $this->_element->setAttributeNS(Zend_Feed::lookupNamespace($ns), $offset, $value);
         } else {
-            return $this->_element->setAttribute($offset, $value);
+            $this->_element->setAttribute($offset, $value);
         }
     }
 

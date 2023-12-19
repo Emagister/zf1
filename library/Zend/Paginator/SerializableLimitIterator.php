@@ -102,7 +102,7 @@ class Zend_Paginator_SerializableLimitIterator extends LimitIterator implements 
      * @param int $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
     }
 

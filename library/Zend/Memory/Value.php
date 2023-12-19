@@ -110,7 +110,7 @@ class Zend_Memory_Value implements ArrayAccess {
      * @param integer $offset
      * @param string $char
      */
-    public function offsetSet($offset, $char)
+    public function offsetSet($offset, $char): void
     {
         $this->_value[$offset] = $char;
 

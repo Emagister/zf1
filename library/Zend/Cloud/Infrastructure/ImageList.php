@@ -196,7 +196,7 @@ class Zend_Cloud_Infrastructure_ImageList implements Countable, Iterator, ArrayA
      * @param   string  $value
      * @throws  Zend_Cloud_Infrastructure_Exception
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         require_once 'Zend/Cloud/Infrastructure/Exception.php';
         throw new Zend_Cloud_Infrastructure_Exception('You are trying to set read-only property');

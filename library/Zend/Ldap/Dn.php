@@ -446,7 +446,7 @@ class Zend_Ldap_Dn implements ArrayAccess
       * @param int   $offset
       * @param array $value
       */
-     public function offsetSet($offset, $value)
+     public function offsetSet($offset, $value): void
      {
          $this->set($offset, $value);
      }

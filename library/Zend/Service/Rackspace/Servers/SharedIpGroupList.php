@@ -212,7 +212,7 @@ class Zend_Service_Rackspace_Servers_SharedIpGroupList implements Countable, Ite
      * @param   string  $value
      * @throws  Zend_Service_Rackspace_Servers_Exception
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         require_once 'Zend/Service/Rackspace/Servers/Exception.php';
         throw new Zend_Service_Rackspace_Servers_Exception('You are trying to set read-only property');

@@ -259,7 +259,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       * @throws   Zend_Mail_Storage_Exception
       * @return   void
       */
-     public function offsetSet($id, $value)
+     public function offsetSet($id, $value): void
      {
         /**
          * @see Zend_Mail_Storage_Exception

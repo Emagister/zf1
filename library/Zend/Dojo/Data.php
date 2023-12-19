@@ -443,7 +443,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * @param  array|object|null $value
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         $this->setItem($value, $offset);
     }

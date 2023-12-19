@@ -296,9 +296,9 @@ abstract class Zend_View_Helper_Placeholder_Container_Standalone extends Zend_Vi
      * @param  mixed $value
      * @return void
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
-        return $this->getContainer()->offsetSet($offset, $value);
+        $this->getContainer()->offsetSet($offset, $value);
     }
 
     /**

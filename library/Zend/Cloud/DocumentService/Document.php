@@ -184,7 +184,7 @@ class Zend_Cloud_DocumentService_Document
      * @param  mixed $value
      * @return void
      */
-    public function offsetSet($name, $value)
+    public function offsetSet($name, $value): void
     {
         $this->setField($name, $value);
     }

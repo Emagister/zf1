@@ -198,7 +198,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * @param  mixed $newval 
          * @return void
          */
-        public function offsetSet($index, $newval)
+        public function offsetSet($index, $newval): void
         {
             $this->data[$index] = $newval;
             $this->stack = false;

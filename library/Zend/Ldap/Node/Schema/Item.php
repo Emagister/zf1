@@ -108,7 +108,7 @@ abstract class Zend_Ldap_Node_Schema_Item implements ArrayAccess, Countable
      * @return null
      * @throws BadMethodCallException
      */
-    public function offsetSet($name, $value)
+    public function offsetSet($name, $value): void
     {
         throw new BadMethodCallException();
     }

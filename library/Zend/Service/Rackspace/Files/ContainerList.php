@@ -199,7 +199,7 @@ class Zend_Service_Rackspace_Files_ContainerList implements Countable, Iterator,
      * @param   string  $value
      * @throws  Zend_Service_Rackspace_Files_Exception
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         require_once 'Zend/Service/Rackspace/Files/Exception.php';
         throw new Zend_Service_Rackspace_Files_Exception('You are trying to set read-only property');

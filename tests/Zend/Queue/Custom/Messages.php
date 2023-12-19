@@ -120,7 +120,7 @@ implements ArrayAccess
     /**
      * @see SPL ArrayAccess::offsetSet
      */
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value): void {
         if (! $value instanceof Custom_Message) {
             $msg = '$value must be a child or an instance of Custom_Messag';
             /**
@@ -131,7 +131,6 @@ implements ArrayAccess
         }
 
         $this->_data[$offset] = $value;
-        return $value;
     }
 
     /**
