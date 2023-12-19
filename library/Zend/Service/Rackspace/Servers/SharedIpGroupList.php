@@ -141,7 +141,7 @@ class Zend_Service_Rackspace_Servers_SharedIpGroupList implements Countable, Ite
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->iteratorKey += 1;
     }

@@ -484,9 +484,9 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->_items);
+        next($this->_items);
     }
 
     /**

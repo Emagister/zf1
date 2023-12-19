@@ -564,9 +564,9 @@ class Zend_Dojo_DataTest_DataCollection implements Iterator
         return key($this->items);
     }
 
-    public function next()
+    public function next(): void
     {
-        return next($this->items);
+        next($this->items);
     }
 
     public function rewind()

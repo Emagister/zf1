@@ -91,7 +91,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      * Move forward to next child.
      * Implements Iterator
      */
-    public function next()
+    public function next(): void
     {
         next($this->_data);
     }

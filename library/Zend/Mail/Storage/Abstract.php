@@ -324,7 +324,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       *
       * @return   void
       */
-     public function next()
+     public function next(): void
      {
         ++$this->_iterationPos;
      }

@@ -275,7 +275,7 @@ class Zend_Config implements Countable, Iterator
      * Defined by Iterator interface
      *
      */
-    public function next()
+    public function next(): void
     {
         if ($this->_skipNextIteration) {
             $this->_skipNextIteration = false;

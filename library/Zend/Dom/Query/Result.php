@@ -164,10 +164,9 @@ class Zend_Dom_Query_Result implements Iterator,Countable
      *
      * @return DOMNode|null
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_position;
-        return $this->_nodeList->item($this->_position);
     }
 
     /**

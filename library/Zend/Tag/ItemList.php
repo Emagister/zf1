@@ -148,9 +148,9 @@ class Zend_Tag_ItemList implements Countable, SeekableIterator, ArrayAccess
      *
      * @return mixed
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->_items);
+        next($this->_items);
     }
 
     /**

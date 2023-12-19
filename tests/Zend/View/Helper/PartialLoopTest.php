@@ -421,9 +421,9 @@ class Zend_View_Helper_PartialLoop_IteratorTest implements Iterator
         return key($this->items);
     }
 
-    public function next()
+    public function next(): void
     {
-        return next($this->items);
+        next($this->items);
     }
 
     public function rewind()
@@ -467,9 +467,9 @@ class Zend_View_Helper_PartialLoop_RecursiveIteratorTest implements Iterator
         return key($this->items);
     }
 
-    public function next()
+    public function next(): void
     {
-        return next($this->items);
+        next($this->items);
     }
 
     public function rewind()
@@ -524,9 +524,9 @@ class Zend_View_Helper_PartialLoop_IteratorWithToArrayTest implements Iterator
         return key($this->items);
     }
 
-    public function next()
+    public function next(): void
     {
-        return next($this->items);
+        next($this->items);
     }
 
     public function rewind()

@@ -124,7 +124,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->iteratorKey++;
     }

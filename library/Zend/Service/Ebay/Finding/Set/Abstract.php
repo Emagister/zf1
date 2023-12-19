@@ -91,7 +91,7 @@ abstract class Zend_Service_Ebay_Finding_Set_Abstract implements SeekableIterato
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->_key++;
     }

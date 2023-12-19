@@ -351,9 +351,9 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->_subResources);
+        next($this->_subResources);
     }
 
     /**

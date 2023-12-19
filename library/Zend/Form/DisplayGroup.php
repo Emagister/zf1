@@ -1070,7 +1070,7 @@ class Zend_Form_DisplayGroup implements Iterator,Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->_sort();
         next($this->_elementOrder);

@@ -143,7 +143,7 @@ class Zend_Service_Flickr_ResultSet implements SeekableIterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->_currentIndex += 1;
     }

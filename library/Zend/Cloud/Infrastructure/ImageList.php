@@ -123,7 +123,7 @@ class Zend_Cloud_Infrastructure_ImageList implements Countable, Iterator, ArrayA
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->iteratorKey++;
     }

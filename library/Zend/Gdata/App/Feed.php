@@ -169,7 +169,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      *
      * @return mixed The next row, or null if no more rows.
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_entryIndex;
     }

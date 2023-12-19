@@ -230,7 +230,7 @@ implements Iterator, Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_entriesKey;
     }

@@ -543,7 +543,7 @@ class Zend_Mail_Part implements RecursiveIterator, Zend_Mail_Part_Interface
      *
      * @return null
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_iterationPos;
     }

@@ -240,9 +240,9 @@ class Zend_Server_Definition implements Countable, Iterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->_methods);
+        next($this->_methods);
     }
 
     /**

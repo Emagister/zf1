@@ -106,7 +106,7 @@ class Zend_Mail_Storage_Folder implements RecursiveIterator
      *
      * @return null
      */
-    public function next()
+    public function next(): void
     {
         next($this->_folders);
     }

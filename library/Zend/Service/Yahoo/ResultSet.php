@@ -148,7 +148,7 @@ class Zend_Service_Yahoo_ResultSet implements SeekableIterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->_currentIndex += 1;
     }

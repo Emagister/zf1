@@ -97,9 +97,9 @@ class Zend_Markup_TokenList implements RecursiveIterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
-        return next($this->_tokens);
+        next($this->_tokens);
     }
 
     /**

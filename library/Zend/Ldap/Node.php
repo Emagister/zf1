@@ -1089,7 +1089,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
      * Move forward to next attribute.
      * Implements Iterator
      */
-    public function next()
+    public function next(): void
     {
         $this->_iteratorRewind = false;
     }

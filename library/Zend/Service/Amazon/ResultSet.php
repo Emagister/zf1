@@ -126,7 +126,7 @@ class Zend_Service_Amazon_ResultSet implements SeekableIterator
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         $this->_currentIndex += 1;
     }

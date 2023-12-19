@@ -237,7 +237,7 @@ abstract class Zend_Feed_Reader_FeedAbstract implements Zend_Feed_Reader_FeedInt
      * Move the feed pointer forward
      *
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_entriesKey;
     }

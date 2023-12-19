@@ -91,9 +91,9 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     }
 
 
-    public function next()
+    public function next(): void
     {
-        return next($this->_items);
+        next($this->_items);
     }
 
 

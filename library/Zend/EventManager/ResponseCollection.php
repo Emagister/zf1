@@ -156,12 +156,13 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * 
          * @return void
          */
-        public function next()
+        public function next(): void
         {
             if (!$this->stack) {
                 $this->rewind();
             }
-            return next($this->stack);
+
+            next($this->stack);
         }
 
         /**

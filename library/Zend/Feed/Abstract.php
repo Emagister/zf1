@@ -218,7 +218,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
      *
      * @return mixed The next row, or null if no more rows.
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_entryIndex;
     }

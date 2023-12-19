@@ -250,7 +250,7 @@ class Zend_Queue_Message_Iterator implements Iterator, Countable
      *
      * @return void
      */
-    public function next()
+    public function next(): void
     {
         ++$this->_pointer;
     }
