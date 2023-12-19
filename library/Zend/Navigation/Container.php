@@ -584,7 +584,7 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
      *
      * @return bool  whether container has any pages
      */
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return $this->hasPages();
     }

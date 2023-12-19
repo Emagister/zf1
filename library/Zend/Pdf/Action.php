@@ -382,7 +382,7 @@ abstract class Zend_Pdf_Action extends Zend_Pdf_Target implements RecursiveItera
      *
      * @return bool  whether container has any pages
      */
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return count($this->next) > 0;
     }

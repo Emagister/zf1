@@ -265,7 +265,7 @@ class Zend_Markup_Token
      *
      * @return bool
      */
-    public function hasChildren()
+    public function hasChildren(): bool
     {
         return !empty($this->_children);
     }
