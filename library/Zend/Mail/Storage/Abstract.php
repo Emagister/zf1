@@ -245,7 +245,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       * @param    int $id
       * @return   Zend_Mail_Message message object
       */
-     public function offsetGet($id)
+     public function offsetGet($id): mixed
      {
         return $this->getMessage($id);
      }

@@ -183,7 +183,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * @return mixed
          * @throws OutOfRangeException
          */
-        public function offsetGet($index)
+        public function offsetGet($index): mixed
         {
             if (!$this->offsetExists($index)) {
                 throw OutOfRangeException(sprintf('Invalid index ("%s") specified', $index));

@@ -172,7 +172,7 @@ class Zend_Cloud_DocumentService_Document
      * @param  string $name
      * @return mixed
      */
-    public function offsetGet($name)
+    public function offsetGet($name): mixed
     {
         return $this->getField($name);
     }

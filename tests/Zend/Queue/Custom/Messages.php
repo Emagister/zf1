@@ -137,7 +137,7 @@ implements ArrayAccess
     /**
      * @see SPL ArrayAccess::offsetGet
      */
-    public function offsetGet($offset) {
+    public function offsetGet($offset): mixed {
         return $this->_data[$offset];
     }
 

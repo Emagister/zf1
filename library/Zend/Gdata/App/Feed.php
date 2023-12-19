@@ -239,7 +239,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      * @param int $key The index to get
      * @param Zend_Gdata_App_Entry $value The value to set
      */
-    public function offsetGet($key)
+    public function offsetGet($key): mixed
     {
         if (array_key_exists($key, $this->_entry)) {
             return $this->_entry[$key];

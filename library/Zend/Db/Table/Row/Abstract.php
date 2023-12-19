@@ -273,9 +273,10 @@ abstract class Zend_Db_Table_Row_Abstract implements ArrayAccess, IteratorAggreg
      * Required by the ArrayAccess implementation
      *
      * @param string $offset
+     *
      * @return string
      */
-     public function offsetGet($offset)
+     public function offsetGet($offset): string
      {
          return $this->__get($offset);
      }

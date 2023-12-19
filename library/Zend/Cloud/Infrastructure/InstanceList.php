@@ -179,7 +179,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      * @return Instance
      * @throws Zend_Cloud_Infrastructure_Exception
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (!$this->offsetExists($offset)) {
             require_once 'Zend/Cloud/Infrastructure/Exception.php';

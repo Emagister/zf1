@@ -193,7 +193,7 @@ class Zend_Service_Rackspace_Servers_ImageList implements Countable, Iterator, A
      * @throws  Zend_Service_Rackspace_Servers_Exception
      * @return  Zend_Service_Rackspace_Servers_Image
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if ($this->offsetExists($offset)) {
             return $this->images[$offset];

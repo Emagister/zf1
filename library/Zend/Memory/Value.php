@@ -98,7 +98,7 @@ class Zend_Memory_Value implements ArrayAccess {
      * @param integer $offset
      * @return string
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->_value[$offset];
     }

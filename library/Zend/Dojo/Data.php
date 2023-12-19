@@ -431,7 +431,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * @param  string|int $offset
      * @return array
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return $this->getItem($offset);
     }

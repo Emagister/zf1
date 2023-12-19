@@ -254,7 +254,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      * @throws  OutOfBoundsException
      * @return  Zend_Service_Delicious_SimplePost
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if ($this->offsetExists($offset)) {
             return $this->_posts[$offset];

@@ -194,7 +194,7 @@ class Zend_Service_Rackspace_Servers_ServerList implements Countable, Iterator, 
      * @throws  Zend_Service_Rackspace_Servers_Exception
      * @return  Zend_Service_Rackspace_Servers_Server
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if ($this->offsetExists($offset)) {
             return $this->servers[$offset];

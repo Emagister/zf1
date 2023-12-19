@@ -178,7 +178,7 @@ class Zend_Cloud_Infrastructure_ImageList implements Countable, Iterator, ArrayA
      * @throws  Zend_Cloud_Infrastructure_Exception
      * @return  Image
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         if (!$this->offsetExists($offset)) {
             require_once 'Zend/Cloud/Infrastructure/Exception.php';
