@@ -100,7 +100,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      * Rewind the Iterator to the first child.
      * Implements Iterator
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->_data);
     }

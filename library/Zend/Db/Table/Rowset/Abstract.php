@@ -227,10 +227,9 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @return void Fluent interface.
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_pointer = 0;
-        return $this;
     }
 
     /**

@@ -108,7 +108,7 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     }
 
 
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->_items);
     }

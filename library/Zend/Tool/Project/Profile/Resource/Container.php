@@ -361,9 +361,9 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->_subResources);
+        reset($this->_subResources);
     }
 
     /**

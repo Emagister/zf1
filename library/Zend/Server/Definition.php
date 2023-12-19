@@ -250,9 +250,9 @@ class Zend_Server_Definition implements Countable, Iterator
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->_methods);
+        reset($this->_methods);
     }
 
     /**

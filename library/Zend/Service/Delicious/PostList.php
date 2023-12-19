@@ -209,7 +209,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_iteratorKey = 0;
     }

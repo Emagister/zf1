@@ -321,9 +321,9 @@ abstract class Zend_Pdf_Outline implements RecursiveIterator, Countable
     /**
      * Rewind children
      */
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->childOutlines);
+        reset($this->childOutlines);
     }
 
     /**

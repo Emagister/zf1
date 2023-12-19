@@ -289,7 +289,7 @@ class Zend_Config implements Countable, Iterator
      * Defined by Iterator interface
      *
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_skipNextIteration = false;
         reset($this->_data);

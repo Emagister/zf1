@@ -178,7 +178,7 @@ class Zend_Tag_ItemList implements Countable, SeekableIterator, ArrayAccess
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         reset($this->_items);
     }

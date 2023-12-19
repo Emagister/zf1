@@ -264,10 +264,10 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * 
          * @return void
          */
-        public function rewind()
+        public function rewind(): void
         {
             if (is_array($this->stack)) {
-                return reset($this->stack);
+                reset($this->stack);
             }
             $this->stack = array_reverse($this->data, true);
         }

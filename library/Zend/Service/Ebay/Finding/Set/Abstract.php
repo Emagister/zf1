@@ -101,7 +101,7 @@ abstract class Zend_Service_Ebay_Finding_Set_Abstract implements SeekableIterato
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_key = 0;
     }

@@ -153,7 +153,7 @@ class Zend_Service_Flickr_ResultSet implements SeekableIterator
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_currentIndex = 0;
     }

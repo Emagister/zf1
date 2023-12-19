@@ -494,9 +494,9 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->_items);
+        reset($this->_items);
     }
 
     /**

@@ -290,7 +290,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       *
       * @return   void
       */
-     public function rewind()
+     public function rewind(): void
      {
         $this->_iterationMax = $this->countMessages();
         $this->_iterationPos = 1;

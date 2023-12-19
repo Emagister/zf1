@@ -196,10 +196,10 @@ class Zend_View_Helper_Cycle implements Iterator
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_pointers[$this->_name] = -1;
-        return $this;
+        $this;
     }
 
     /**

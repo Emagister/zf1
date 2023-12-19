@@ -139,7 +139,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_entryIndex = 0;
     }

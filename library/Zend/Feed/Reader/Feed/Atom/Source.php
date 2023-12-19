@@ -87,7 +87,7 @@ class Zend_Feed_Reader_Feed_Atom_Source extends Zend_Feed_Reader_Feed_Atom
     /**
      * @return void
      */
-    public function rewind() {}
+    public function rewind(): void {}
 
     /**
      * @return void

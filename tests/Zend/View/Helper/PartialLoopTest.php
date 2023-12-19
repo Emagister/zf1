@@ -426,9 +426,9 @@ class Zend_View_Helper_PartialLoop_IteratorTest implements Iterator
         next($this->items);
     }
 
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->items);
+        reset($this->items);
     }
 
     public function valid(): bool
@@ -472,9 +472,9 @@ class Zend_View_Helper_PartialLoop_RecursiveIteratorTest implements Iterator
         next($this->items);
     }
 
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->items);
+        reset($this->items);
     }
 
     public function valid(): bool
@@ -529,9 +529,9 @@ class Zend_View_Helper_PartialLoop_IteratorWithToArrayTest implements Iterator
         next($this->items);
     }
 
-    public function rewind()
+    public function rewind(): void
     {
-        return reset($this->items);
+        reset($this->items);
     }
 
     public function valid(): bool

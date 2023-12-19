@@ -120,10 +120,9 @@ class Zend_Dom_Query_Result implements Iterator,Countable
      *
      * @return DOMNode|null
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->_position = 0;
-        return $this->_nodeList->item(0);
     }
 
     /**
