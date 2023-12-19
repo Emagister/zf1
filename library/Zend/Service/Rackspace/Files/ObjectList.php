@@ -133,7 +133,7 @@ class Zend_Service_Rackspace_Files_ObjectList implements Countable, Iterator, Ar
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

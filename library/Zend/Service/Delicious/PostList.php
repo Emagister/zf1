@@ -185,7 +185,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_iteratorKey;
     }

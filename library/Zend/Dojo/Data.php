@@ -474,7 +474,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      *
      * @return string|int
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_items);
     }

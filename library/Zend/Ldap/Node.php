@@ -1080,7 +1080,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
      *
      * @return string
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->getRdnString();
     }

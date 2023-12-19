@@ -230,7 +230,7 @@ class Zend_Server_Definition implements Countable, Iterator
      *
      * @return int|string
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_methods);
     }

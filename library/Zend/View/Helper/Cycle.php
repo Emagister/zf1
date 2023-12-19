@@ -183,7 +183,7 @@ class Zend_View_Helper_Cycle implements Iterator
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         if ($this->_pointers[$this->_name] < 0)
             return 0;

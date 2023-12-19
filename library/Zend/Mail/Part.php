@@ -553,7 +553,7 @@ class Zend_Mail_Part implements RecursiveIterator, Zend_Mail_Part_Interface
      *
      * @return string key/number of current part
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_iterationPos;
     }

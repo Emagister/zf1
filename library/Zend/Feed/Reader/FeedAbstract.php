@@ -228,7 +228,7 @@ abstract class Zend_Feed_Reader_FeedAbstract implements Zend_Feed_Reader_FeedInt
      *
      * @return unknown
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_entriesKey;
     }

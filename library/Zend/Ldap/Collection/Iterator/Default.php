@@ -231,7 +231,7 @@ class Zend_Ldap_Collection_Iterator_Default implements Iterator, Countable
      *
      * @return string|null
      */
-    public function key()
+    public function key(): mixed
     {
         if (!is_resource($this->_current)) {
             $this->rewind();

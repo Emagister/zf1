@@ -185,7 +185,7 @@ class Zend_Ldap_Collection implements Iterator, Countable
      *
      * @return int|null
      */
-    public function key()
+    public function key(): mixed
     {
         if ($this->count() > 0) {
             if ($this->_current < 0) {

@@ -336,7 +336,7 @@ abstract class Zend_Pdf_Action extends Zend_Pdf_Target implements RecursiveItera
      *
      * @return integer
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->next);
     }

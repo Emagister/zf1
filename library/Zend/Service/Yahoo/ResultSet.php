@@ -137,7 +137,7 @@ class Zend_Service_Yahoo_ResultSet implements SeekableIterator
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_currentIndex;
     }

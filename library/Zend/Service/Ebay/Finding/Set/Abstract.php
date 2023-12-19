@@ -81,7 +81,7 @@ abstract class Zend_Service_Ebay_Finding_Set_Abstract implements SeekableIterato
      *
      * @return integer
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_key;
     }

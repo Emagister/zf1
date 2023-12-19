@@ -130,7 +130,7 @@ class Zend_Service_Rackspace_Servers_SharedIpGroupList implements Countable, Ite
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

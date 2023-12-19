@@ -116,7 +116,7 @@ class Zend_Service_Amazon_ResultSet implements SeekableIterator
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_currentIndex;
     }

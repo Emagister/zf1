@@ -1059,7 +1059,7 @@ class Zend_Form_DisplayGroup implements Iterator,Countable
      *
      * @return string
      */
-    public function key()
+    public function key(): mixed
     {
         $this->_sort();
         return key($this->_elementOrder);

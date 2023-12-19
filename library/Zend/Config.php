@@ -266,7 +266,7 @@ class Zend_Config implements Countable, Iterator
      *
      * @return mixed
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_data);
     }

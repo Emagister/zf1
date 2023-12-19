@@ -559,7 +559,7 @@ class Zend_Dojo_DataTest_DataCollection implements Iterator
         return current($this->items);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->items);
     }

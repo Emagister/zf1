@@ -117,7 +117,7 @@ class Zend_Service_Rackspace_Files_ContainerList implements Countable, Iterator,
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

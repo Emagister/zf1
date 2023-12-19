@@ -238,7 +238,7 @@ class Zend_Queue_Message_Iterator implements Iterator, Countable
      *
      * @return integer
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_pointer;
     }

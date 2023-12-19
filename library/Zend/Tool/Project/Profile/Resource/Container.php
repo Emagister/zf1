@@ -341,7 +341,7 @@ class Zend_Tool_Project_Profile_Resource_Container implements RecursiveIterator,
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_subResources);
     }

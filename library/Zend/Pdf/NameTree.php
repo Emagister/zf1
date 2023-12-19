@@ -97,7 +97,7 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     }
 
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->_items);
     }

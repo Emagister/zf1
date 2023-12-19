@@ -416,7 +416,7 @@ class Zend_View_Helper_PartialLoop_IteratorTest implements Iterator
         return current($this->items);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->items);
     }
@@ -462,7 +462,7 @@ class Zend_View_Helper_PartialLoop_RecursiveIteratorTest implements Iterator
         return current($this->items);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->items);
     }
@@ -519,7 +519,7 @@ class Zend_View_Helper_PartialLoop_IteratorWithToArrayTest implements Iterator
         return current($this->items);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return key($this->items);
     }

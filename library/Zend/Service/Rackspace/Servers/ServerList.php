@@ -131,7 +131,7 @@ class Zend_Service_Rackspace_Servers_ServerList implements Countable, Iterator, 
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

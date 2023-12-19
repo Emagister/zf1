@@ -3295,7 +3295,7 @@ class Zend_Form implements Iterator, Countable, Zend_Validate_Interface
      *
      * @return string
      */
-    public function key()
+    public function key(): mixed
     {
         $this->_sort();
         return key($this->_order);

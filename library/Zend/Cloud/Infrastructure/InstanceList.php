@@ -112,7 +112,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

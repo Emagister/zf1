@@ -207,7 +207,7 @@ abstract class Zend_Feed_Abstract extends Zend_Feed_Element implements Iterator,
      *
      * @return mixed The current row number (starts at 0), or NULL if no rows
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_entryIndex;
     }

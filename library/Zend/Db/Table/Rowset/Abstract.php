@@ -257,7 +257,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_pointer;
     }

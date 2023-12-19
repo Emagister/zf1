@@ -159,7 +159,7 @@ class Zend_Gdata_App_Feed extends Zend_Gdata_App_FeedSourceParent
      *
      * @return mixed The current row number (starts at 0), or NULL if no rows
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_entryIndex;
     }

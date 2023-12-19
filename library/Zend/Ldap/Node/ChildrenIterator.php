@@ -82,7 +82,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      *
      * @return string
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_data);
     }

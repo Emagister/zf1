@@ -87,7 +87,7 @@ class Zend_Markup_TokenList implements RecursiveIterator
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_tokens);
     }

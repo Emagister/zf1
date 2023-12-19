@@ -532,7 +532,7 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
      *
      * @return string  hash code of current page
      */
-    public function key()
+    public function key(): mixed
     {
         $this->_sort();
         return key($this->_index);

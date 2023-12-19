@@ -154,7 +154,7 @@ class Zend_Dom_Query_Result implements Iterator,Countable
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_position;
     }

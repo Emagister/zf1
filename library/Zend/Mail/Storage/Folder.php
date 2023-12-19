@@ -116,7 +116,7 @@ class Zend_Mail_Storage_Folder implements RecursiveIterator
      *
      * @return string key/local name of current element
      */
-    public function key()
+    public function key(): mixed
     {
         return key($this->_folders);
     }

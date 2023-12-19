@@ -130,7 +130,7 @@ class Zend_Service_Rackspace_Servers_ImageList implements Countable, Iterator, A
      *
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->iteratorKey;
     }

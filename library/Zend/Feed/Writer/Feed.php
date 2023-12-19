@@ -220,7 +220,7 @@ implements Iterator, Countable
      *
      * @return unknown
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->_entriesKey;
     }
