@@ -171,7 +171,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * @param  mixed $index 
          * @return bool
          */
-        public function offsetExists($index)
+        public function offsetExists($index): bool
         {
             return array_key_exists($index, $this->data);
         }

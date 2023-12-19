@@ -183,7 +183,7 @@ class Zend_Service_Rackspace_Files_ObjectList implements Countable, Iterator, Ar
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

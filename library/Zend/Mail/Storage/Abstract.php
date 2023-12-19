@@ -227,7 +227,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       * @param    int     $id
       * @return   boolean
       */
-     public function offsetExists($id)
+     public function offsetExists($id): bool
      {
         try {
             if ($this->getMessage($id)) {

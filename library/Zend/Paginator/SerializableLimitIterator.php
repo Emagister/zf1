@@ -111,7 +111,7 @@ class Zend_Paginator_SerializableLimitIterator extends LimitIterator implements 
      *
      * @param int $offset
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         if ($offset > 0 && $offset < $this->_count) {
             try {

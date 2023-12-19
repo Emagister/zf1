@@ -240,7 +240,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

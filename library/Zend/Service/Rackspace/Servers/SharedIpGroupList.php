@@ -180,7 +180,7 @@ class Zend_Service_Rackspace_Servers_SharedIpGroupList implements Countable, Ite
      * @param   int     $offset
      * @return  boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

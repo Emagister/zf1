@@ -164,7 +164,7 @@ class Zend_Cloud_Infrastructure_ImageList implements Countable, Iterator, ArrayA
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

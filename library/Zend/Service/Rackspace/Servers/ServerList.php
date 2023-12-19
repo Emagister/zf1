@@ -181,7 +181,7 @@ class Zend_Service_Rackspace_Servers_ServerList implements Countable, Iterator, 
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

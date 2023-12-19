@@ -273,7 +273,7 @@ abstract class Zend_View_Helper_Placeholder_Container_Standalone extends Zend_Vi
      * @param  string|int $offset
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return $this->getContainer()->offsetExists($offset);
     }

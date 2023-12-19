@@ -467,7 +467,7 @@ abstract class Zend_Ldap_Node_Abstract implements ArrayAccess, Countable
      * @param  string $name
      * @return boolean
      */
-    public function offsetExists($name)
+    public function offsetExists($name): bool
     {
         return $this->existsAttribute($name, false);
     }

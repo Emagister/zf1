@@ -165,7 +165,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      * @param  int $offset
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

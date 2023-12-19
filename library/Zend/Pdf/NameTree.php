@@ -114,7 +114,7 @@ class Zend_Pdf_NameTree implements ArrayAccess, Iterator, Countable
     }
 
 
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return array_key_exists($offset, $this->_items);
     }

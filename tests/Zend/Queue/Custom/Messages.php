@@ -161,7 +161,7 @@ implements ArrayAccess
     /**
      * @see SPL ArrayAccess::offsetExists
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset): bool {
         return isSet($this->_data[$offset]);
     }
 

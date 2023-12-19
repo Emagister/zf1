@@ -180,7 +180,7 @@ class Zend_Service_Rackspace_Servers_ImageList implements Countable, Iterator, A
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

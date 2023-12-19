@@ -161,7 +161,7 @@ class Zend_Cloud_DocumentService_Document
      * @param  string $name
      * @return bool
      */
-    public function offsetExists($name)
+    public function offsetExists($name): bool
     {
         return isset($this->_fields[$name]);
     }

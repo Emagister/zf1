@@ -169,7 +169,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      * @param  string $rdn
      * @return boolean
      */
-    public function offsetExists($rdn)
+    public function offsetExists($rdn): bool
     {
         return (array_key_exists($rdn, $this->_data));
     }

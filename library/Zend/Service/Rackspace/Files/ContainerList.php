@@ -167,7 +167,7 @@ class Zend_Service_Rackspace_Files_ContainerList implements Countable, Iterator,
      * @param   int     $offset
      * @return  bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return ($offset < $this->count());
     }

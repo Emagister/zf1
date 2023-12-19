@@ -374,7 +374,7 @@ class Zend_Feed_Element implements ArrayAccess
      * @param  string $offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         if (strpos($offset, ':') !== false) {
             list($ns, $attr) = explode(':', $offset, 2);

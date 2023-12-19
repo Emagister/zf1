@@ -420,7 +420,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * @param  string|int $offset
      * @return bool
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return (null !== $this->getItem($offset));
     }

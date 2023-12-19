@@ -323,7 +323,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      * @param string $offset
      * @return boolean
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->_data[(int) $offset]);
     }
