@@ -351,7 +351,7 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       * @return void
       * @throws OutOfBoundsException
       */
-     public function seek($pos)
+     public function seek($pos): void
      {
         if ($this->_iterationMax === null) {
           $this->_iterationMax = $this->countMessages();

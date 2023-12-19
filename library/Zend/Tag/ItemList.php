@@ -118,7 +118,7 @@ class Zend_Tag_ItemList implements Countable, SeekableIterator, ArrayAccess
      * @throws OutOfBoundsException When the seek position is invalid
      * @return void
      */
-    public function seek($index)
+    public function seek($index): void
     {
         $this->rewind();
         $position = 0;

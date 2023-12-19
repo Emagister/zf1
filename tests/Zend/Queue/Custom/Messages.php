@@ -171,7 +171,7 @@ implements ArrayAccess
     /**
      * @see SPL SeekableIterator::seek
      */
-    public function seek($index) {
+    public function seek($index): void {
         $this->_pointer = $index;
     }
 }
