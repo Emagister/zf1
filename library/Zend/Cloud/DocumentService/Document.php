@@ -241,7 +241,7 @@ class Zend_Cloud_DocumentService_Document
      *
      * @return Iterator
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->_fields);
     }

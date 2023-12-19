@@ -130,7 +130,7 @@ class Zend_Tool_Framework_Action_Repository
      *
      * @return Traversable
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->_actions);
     }

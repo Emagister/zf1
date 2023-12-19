@@ -865,7 +865,7 @@ class Zend_Session extends Zend_Session_Abstract
      * @throws Zend_Session_Exception
      * @return ArrayObject
      */
-    public static function getIterator()
+    public static function getIterator(): Traversable
     {
         if (parent::$_readable === false) {
             /** @see Zend_Session_Exception */
