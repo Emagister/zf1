@@ -252,7 +252,7 @@ class Zend_Markup_Token
      *
      * @return Zend_Markup_TokenList
      */
-    public function getChildren()
+    public function getChildren(): ?RecursiveIterator
     {
         if (null === $this->_children) {
             $this->setChildren(new Zend_Markup_TokenList());

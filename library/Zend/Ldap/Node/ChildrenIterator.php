@@ -137,7 +137,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      *
      * @return Zend_Ldap_Node_ChildrenIterator
      */
-    public function getChildren()
+    public function getChildren(): ?RecursiveIterator
     {
         if ($this->current() instanceof Zend_Ldap_Node) {
             return $this->current()->getChildren();

@@ -596,7 +596,7 @@ abstract class Zend_Navigation_Container implements RecursiveIterator, Countable
      *
      * @return Zend_Navigation_Page|null
      */
-    public function getChildren()
+    public function getChildren(): ?RecursiveIterator
     {
         $hash = key($this->_index);
 

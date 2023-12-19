@@ -117,7 +117,7 @@ class Zend_Server_Reflection_Node
      *
      * @return array
      */
-    public function getChildren()
+    public function getChildren(): ?RecursiveIterator
     {
         return $this->_children;
     }
