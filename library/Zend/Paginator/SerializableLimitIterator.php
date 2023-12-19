@@ -136,7 +136,7 @@ class Zend_Paginator_SerializableLimitIterator extends LimitIterator implements 
      *
      * @param int $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
     }
 }

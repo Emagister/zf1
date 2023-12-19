@@ -453,7 +453,7 @@ abstract class Zend_Ldap_Node_Abstract implements ArrayAccess, Countable
      * @return null
      * @throws BadMethodCallException
      */
-    public function offsetUnset($name)
+    public function offsetUnset($name): void
     {
         throw new BadMethodCallException();
     }

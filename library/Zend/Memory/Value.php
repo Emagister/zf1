@@ -126,7 +126,7 @@ class Zend_Memory_Value implements ArrayAccess {
      *
      * @param integer $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->_value[$offset]);
 

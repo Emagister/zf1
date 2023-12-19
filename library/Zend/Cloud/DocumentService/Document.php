@@ -195,7 +195,7 @@ class Zend_Cloud_DocumentService_Document
      * @param  string $name
      * @return void
      */
-    public function offsetUnset($name)
+    public function offsetUnset($name): void
     {
         if ($this->offsetExists($name)) {
             unset($this->_fields[$name]);

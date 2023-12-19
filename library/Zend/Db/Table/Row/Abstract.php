@@ -299,7 +299,7 @@ abstract class Zend_Db_Table_Row_Abstract implements ArrayAccess, IteratorAggreg
       *
       * @param string $offset
       */
-     public function offsetUnset($offset)
+     public function offsetUnset($offset): void
      {
          return $this->__unset($offset);
      }

@@ -143,7 +143,7 @@ implements ArrayAccess
     /**
      * @see SPL ArrayAccess::offsetUnset
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset): void {
         if (! $this->_connected) {
             $msg = 'Cannot delete message after serialization';
             /**

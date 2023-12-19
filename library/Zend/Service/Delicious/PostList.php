@@ -289,7 +289,7 @@ class Zend_Service_Delicious_PostList implements Countable, Iterator, ArrayAcces
      * @param   int     $offset
      * @throws  Zend_Service_Delicious_Exception
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         /**
          * @see Zend_Service_Delicious_Exception

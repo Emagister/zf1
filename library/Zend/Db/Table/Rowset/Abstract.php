@@ -364,7 +364,7 @@ abstract class Zend_Db_Table_Rowset_Abstract implements SeekableIterator, Counta
      *
      * @param string $offset
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
     }
 

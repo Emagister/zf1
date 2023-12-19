@@ -212,7 +212,7 @@ if (version_compare(PHP_VERSION, '5.3.0', '<')) {
          * @return void
          * @throws OutOfRangeException
          */
-        public function offsetUnset($index)
+        public function offsetUnset($index): void
         {
             if (!$this->offsetExists($index)) {
                 throw OutOfRangeException(sprintf('Invalid index ("%s") specified', $index));

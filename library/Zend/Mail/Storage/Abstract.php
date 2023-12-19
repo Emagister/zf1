@@ -275,9 +275,9 @@ abstract class Zend_Mail_Storage_Abstract implements Countable, ArrayAccess, See
       * @param    int   $id
       * @return   void
       */
-     public function offsetUnset($id)
+     public function offsetUnset($id): void
      {
-        return $this->removeMessage($id);
+        $this->removeMessage($id);
      }
 
 

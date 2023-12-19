@@ -307,9 +307,9 @@ abstract class Zend_View_Helper_Placeholder_Container_Standalone extends Zend_Vi
      * @param  string|int $offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
-        return $this->getContainer()->offsetUnset($offset);
+        $this->getContainer()->offsetUnset($offset);
     }
 
     /**

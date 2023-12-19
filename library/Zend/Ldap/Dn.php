@@ -457,7 +457,7 @@ class Zend_Ldap_Dn implements ArrayAccess
       *
       * @param int $offset
       */
-     public function offsetUnset($offset)
+     public function offsetUnset($offset): void
      {
          $this->remove($offset, 1);
      }

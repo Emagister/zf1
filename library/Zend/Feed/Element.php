@@ -429,13 +429,13 @@ class Zend_Feed_Element implements ArrayAccess
      * @param  string $offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         if (strpos($offset, ':') !== false) {
             list($ns, $attr) = explode(':', $offset, 2);
-            return $this->_element->removeAttributeNS(Zend_Feed::lookupNamespace($ns), $attr);
+            $this->_element->removeAttributeNS(Zend_Feed::lookupNamespace($ns), $attr);
         } else {
-            return $this->_element->removeAttribute($offset);
+            $this->_element->removeAttribute($offset);
         }
     }
 

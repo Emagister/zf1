@@ -181,7 +181,7 @@ class Zend_Ldap_Node_ChildrenIterator implements Iterator, Countable, RecursiveI
      * @param  string $name
      * @return null
      */
-    public function offsetUnset($name) { }
+    public function offsetUnset($name): void { }
 
     /**
      * Does nothing.

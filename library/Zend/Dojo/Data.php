@@ -454,7 +454,7 @@ class Zend_Dojo_Data implements ArrayAccess,Iterator,Countable
      * @param  string $offset
      * @return void
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         $this->removeItem($offset);
     }

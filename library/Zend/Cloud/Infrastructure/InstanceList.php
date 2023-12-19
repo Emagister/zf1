@@ -211,7 +211,7 @@ class Zend_Cloud_Infrastructure_InstanceList implements Countable, Iterator, Arr
      * @param   int     $offset
      * @throws  Zend_Cloud_Infrastructure_Exception
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         require_once 'Zend/Cloud/Infrastructure/Exception.php';
         throw new Zend_Cloud_Infrastructure_Exception('You are trying to unset read-only property');
