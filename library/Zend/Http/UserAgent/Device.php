@@ -19,6 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 
+use JetBrains\PhpStorm\Internal\LanguageLevelTypeAware;
+
 /**
  * Interface defining a browser device type.
  *
@@ -28,7 +30,7 @@
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
-interface Zend_Http_UserAgent_Device extends Serializable
+interface Zend_Http_UserAgent_Device
 {
     /**
      * Constructor
@@ -197,4 +199,8 @@ interface Zend_Http_UserAgent_Device extends Serializable
      * @return bool
      */
     public function httpsSupport();
+
+    public function serialize();
+
+    public function unserialize($data);
 }
