@@ -48,9 +48,9 @@ class IndexController extends Zend_Controller_Action
     {
         $auth = Zend_Auth::getInstance();
         if (!$auth->hasIdentity()) {
-            $this->_redirect('/index/login');
+            $this->redirect('/index/login');
         } else {
-            $this->_redirect('/index/welcome');
+            $this->redirect('/index/welcome');
         }
     }
 
@@ -63,7 +63,7 @@ class IndexController extends Zend_Controller_Action
     {
         $auth = Zend_Auth::getInstance();
         if (!$auth->hasIdentity()) {
-            $this->_redirect('index/login');
+            $this->redirect('index/login');
         }
         $this->view->user = $auth->getIdentity();
     }
@@ -88,7 +88,7 @@ class IndexController extends Zend_Controller_Action
             $result = $auth->authenticate(
                 new Zend_Auth_Adapter_OpenId($this->_request->getPost('openid_identifier')));
             if ($result->isValid()) {
-                $this->_redirect('/index/welcome');
+                $this->redirect('/index/welcome');
             } else {
                 $auth->clearIdentity();
                 foreach ($result->getMessages() as $message) {
@@ -107,6 +107,6 @@ class IndexController extends Zend_Controller_Action
     public function logoutAction()
     {
         Zend_Auth::getInstance()->clearIdentity();
-        $this->_redirect('/index/index');
+        $this->redirect('/index/index');
     }
 }

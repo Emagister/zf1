@@ -31,7 +31,7 @@ class ZendTestRedirectFromPreDispatchController extends Zend_Controller_Action
 {
     public function preDispatch()
     {
-        return $this->_redirect('/login');
+        return $this->redirect('/login');
     }
 
     public function bazAction()

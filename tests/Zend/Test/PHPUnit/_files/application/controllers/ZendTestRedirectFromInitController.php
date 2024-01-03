@@ -31,7 +31,7 @@ class ZendTestRedirectFromInitController extends Zend_Controller_Action
 {
     public function init()
     {
-        return $this->_redirect('/login');
+        return $this->redirect('/login');
     }
 
     public function bazAction()

@@ -49,6 +49,6 @@ class ActionFooController extends Zend_Controller_Action
     public function redirectAction()
     {
         $this->_helper->redirector->setExit(false);
-        $this->_redirect('/foo/bar');
+        $this->redirect('/foo/bar');
     }
 }
