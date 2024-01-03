@@ -156,7 +156,7 @@ class Zend_Cache_Frontend_File extends Zend_Cache_Core
     public function setOption($name, $value)
     {
         if ($name == 'master_file') {
-            $this->setMasterFile($value);
+            $this->setMasterFiles([$value]);
         } else if ($name == 'master_files') {
             $this->setMasterFiles($value);
         } else {
