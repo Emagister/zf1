@@ -34,6 +34,8 @@ require_once 'Zend/Filter/Encrypt/Interface.php';
  */
 class Zend_Filter_Encrypt_Openssl implements Zend_Filter_Encrypt_Interface
 {
+    private const CIPHER_ALGORITHM = 'aes-256-cbc';
+
     /**
      * Definitions for encryption
      * array(
@@ -353,7 +355,7 @@ class Zend_Filter_Encrypt_Openssl implements Zend_Filter_Encrypt_Interface
      */
     public function encrypt($value)
     {
-        $encrypted     = array();
+        $encrypted     = '';
         $encryptedkeys = array();
 
         if (count($this->_keys['public']) == 0) {
@@ -384,9 +386,11 @@ class Zend_Filter_Encrypt_Openssl implements Zend_Filter_Encrypt_Interface
             $value    = $compress->filter($value);
         }
 
-        $crypt  = openssl_seal($value, $encrypted, $encryptedkeys, $keys);
-        foreach ($keys as $key) {
-            openssl_free_key($key);
+        $crypt  = openssl_seal($value, $encrypted, $encryptedkeys, $keys, self::CIPHER_ALGORITHM);
+        if (PHP_VERSION_ID < 80000) {
+            foreach ($keys as $key) {
+                openssl_free_key($key);
+            }
         }
 
         if ($crypt === false) {
@@ -462,8 +466,10 @@ class Zend_Filter_Encrypt_Openssl implements Zend_Filter_Encrypt_Interface
             $value = substr($value, $length);
         }
 
-        $crypt  = openssl_open($value, $decrypted, $envelope, $keys);
-        openssl_free_key($keys);
+        $crypt  = openssl_open($value, $decrypted, $envelope, $keys, self::CIPHER_ALGORITHM);
+        if (PHP_VERSION_ID < 80000) {
+            openssl_free_key($keys);
+        }
 
         if ($crypt === false) {
             require_once 'Zend/Filter/Exception.php';
