@@ -431,7 +431,7 @@ class Zend_Amf_RequestTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(1, sizeof($this->_request->getAmfBodies()));
         $bodies = $this->_request->getAmfBodies();
         $this->assertTrue($bodies[0] instanceof Zend_Amf_Value_MessageBody);
-        $data = $bodies[0]->getData();
+        $data = (array) $bodies[0]->getData();
         // Make sure that the string was deserialized properly and check its value
         $this->assertTrue(array_key_exists(1, $data[0]));
         $this->assertEquals('two', $data[0]->two);

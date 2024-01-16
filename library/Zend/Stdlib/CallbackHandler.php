@@ -251,7 +251,7 @@ class Zend_Stdlib_CallbackHandler
      */
     public function getMetadatum($name)
     {
-        if (array_key_exists($name, $this->metadata)) {
+        if (is_array($this->metadata) && array_key_exists($name, $this->metadata)) {
             return $this->metadata[$name];
         }
         return null;

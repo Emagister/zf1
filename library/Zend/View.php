@@ -115,7 +115,7 @@ class Zend_View extends Zend_View_Abstract
             }
         }
 
-        if (array_key_exists('useStreamWrapper', $config)) {
+        if (is_array($config) && array_key_exists('useStreamWrapper', $config)) {
             $this->setUseStreamWrapper($config['useStreamWrapper']);
         }
 

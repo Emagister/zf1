@@ -119,7 +119,7 @@ class Zend_Db_Adapter_Pdo_Ibm_Ids
                 $primaryCols = $this->_getPrimaryInfo($row[$tabid]);
             }
 
-            if (array_key_exists($row[$colno], $primaryCols)) {
+            if (is_array($primaryCols) && array_key_exists($row[$colno], $primaryCols)) {
                 $primary = true;
                 $primaryPosition = $primaryCols[$row[$colno]];
             }

@@ -1561,20 +1561,22 @@ class Zend_Validate_Hostname extends Zend_Validate_Abstract
      */
     public function setOptions($options)
     {
-        if (array_key_exists('allow', $options)) {
-            $this->setAllow($options['allow']);
-        }
+        if(is_array($options)){
+            if (array_key_exists('allow', $options)) {
+                $this->setAllow($options['allow']);
+            }
 
-        if (array_key_exists('idn', $options)) {
-            $this->setValidateIdn($options['idn']);
-        }
+            if (array_key_exists('idn', $options)) {
+                $this->setValidateIdn($options['idn']);
+            }
 
-        if (array_key_exists('tld', $options)) {
-            $this->setValidateTld($options['tld']);
-        }
+            if (array_key_exists('tld', $options)) {
+                $this->setValidateTld($options['tld']);
+            }
 
-        if (array_key_exists('ip', $options)) {
-            $this->setIpValidator($options['ip']);
+            if (array_key_exists('ip', $options)) {
+                $this->setIpValidator($options['ip']);
+            }
         }
 
         return $this;
@@ -1816,7 +1818,7 @@ class Zend_Validate_Hostname extends Zend_Validate_Abstract
                             if ($status > 0) {
                                 $length = 63;
                                 if (array_key_exists(strtoupper($this->_tld), $this->_idnLength)
-                                    && (array_key_exists($regexKey, $this->_idnLength[strtoupper($this->_tld)]))) {
+                                    && (is_array($this->_idnLength[strtoupper($this->_tld)]) && array_key_exists($regexKey, $this->_idnLength[strtoupper($this->_tld)]))) {
                                     $length = $this->_idnLength[strtoupper($this->_tld)];
                                 }
 

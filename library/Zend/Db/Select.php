@@ -268,7 +268,7 @@ class Zend_Db_Select
             $correlationName = current($correlationNameKeys);
         }
 
-        if (!array_key_exists($correlationName, $this->_parts[self::FROM])) {
+        if (!is_array($this->_parts[self::FROM]) || !array_key_exists($correlationName, $this->_parts[self::FROM])) {
             /**
              * @see Zend_Db_Select_Exception
              */
@@ -825,7 +825,7 @@ class Zend_Db_Select
 
         $lastFromCorrelationName = null;
         if (!empty($correlationName)) {
-            if (array_key_exists($correlationName, $this->_parts[self::FROM])) {
+            if (is_array($this->_parts[self::FROM]) && array_key_exists($correlationName, $this->_parts[self::FROM])) {
                 /**
                  * @see Zend_Db_Select_Exception
                  */
@@ -932,8 +932,10 @@ class Zend_Db_Select
             $dot = strrpos($name,'.');
             $c = ($dot === false) ? $name : substr($name, $dot+1);
         }
-        for ($i = 2; array_key_exists($c, $this->_parts[self::FROM]); ++$i) {
-            $c = $name . '_' . (string) $i;
+        if(is_array($this->_parts[self::FROM])){
+            for ($i = 2; array_key_exists($c, $this->_parts[self::FROM]); ++$i) {
+                $c = $name . '_' . (string)$i;
+            }
         }
         return $c;
     }

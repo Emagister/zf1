@@ -128,7 +128,7 @@ class Zend_Config implements Countable, Iterator
     public function get($name, $default = null)
     {
         $result = $default;
-        if (array_key_exists($name, $this->_data)) {
+        if (is_array($this->_data) && array_key_exists($name, $this->_data)) {
             $result = $this->_data[$name];
         }
         return $result;
@@ -341,7 +341,7 @@ class Zend_Config implements Countable, Iterator
     public function merge(Zend_Config $merge)
     {
         foreach($merge as $key => $item) {
-            if(array_key_exists($key, $this->_data)) {
+            if(is_array($this->_data) && array_key_exists($key, $this->_data)) {
                 if($item instanceof Zend_Config && $this->$key instanceof Zend_Config) {
                     $this->$key = $this->$key->merge(new Zend_Config($item->toArray(), !$this->readOnly()));
                 } else {

@@ -283,7 +283,7 @@ class Zend_Ldap
         );
 
         foreach ($permittedOptions as $key => $val) {
-            if (array_key_exists($key, $options)) {
+            if (is_array($options) && array_key_exists($key, $options)) {
                 $val = $options[$key];
                 unset($options[$key]);
                 /* Enforce typing. This eliminates issues like Zend_Config_Ini

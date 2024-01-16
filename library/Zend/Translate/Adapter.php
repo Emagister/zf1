@@ -786,7 +786,7 @@ abstract class Zend_Translate_Adapter {
         $this->_log($messageId, $locale);
         // use rerouting when enabled
         if (!empty($this->_options['route'])) {
-            if (array_key_exists($locale, $this->_options['route']) &&
+            if (is_array($this->_options['route']) && array_key_exists($locale, $this->_options['route']) &&
                 !array_key_exists($locale, $this->_routed)) {
                 $this->_routed[$locale] = true;
                 return $this->translate($messageId, $this->_options['route'][$locale]);

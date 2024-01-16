@@ -321,7 +321,7 @@ class Zend_Controller_Router_Route extends Zend_Controller_Router_Route_Abstract
 
         // Check if all map variables have been initialized
         foreach ($this->_variables as $var) {
-            if (!array_key_exists($var, $return)) {
+            if (!is_array($return) || !array_key_exists($var, $return)) {
                 return false;
             } elseif ($return[$var] == '' || $return[$var] === null) {
                 // Empty variable? Replace with the default value.

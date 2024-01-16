@@ -79,7 +79,7 @@ abstract class Zend_Ldap_Node_Schema_Item implements ArrayAccess, Countable
      */
     public function __get($name)
     {
-        if (array_key_exists($name, $this->_data)) {
+        if (is_array($this->_data) && array_key_exists($name, $this->_data)) {
             return $this->_data[$name];
         } else {
             return null;
@@ -94,7 +94,7 @@ abstract class Zend_Ldap_Node_Schema_Item implements ArrayAccess, Countable
      */
     public function __isset($name)
     {
-        return (array_key_exists($name, $this->_data));
+        return (is_array($this->_data) && array_key_exists($name, $this->_data));
     }
 
     /**

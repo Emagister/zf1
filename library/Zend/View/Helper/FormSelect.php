@@ -171,7 +171,7 @@ class Zend_View_Helper_FormSelect extends Zend_View_Helper_FormElement
         }
 
         $class = null;
-        if (array_key_exists($value, $optionClasses)) {
+        if (is_array($optionClasses) && array_key_exists($value, $optionClasses)) {
             $class = $optionClasses[$value];
         }
 

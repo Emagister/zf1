@@ -327,7 +327,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
     protected function _ensureRdnAttributeValues($overwrite = false)
     {
         foreach ($this->getRdnArray() as $key => $value) {
-            if (!array_key_exists($key, $this->_currentData) || $overwrite) {
+            if (!is_array($this->_currentDat) || !array_key_exists($key, $this->_currentData) || $overwrite) {
                 Zend_Ldap_Attribute::setAttribute($this->_currentData, $key, $value, false);
             } else if (!in_array($value, $this->_currentData[$key])) {
                 Zend_Ldap_Attribute::setAttribute($this->_currentData, $key, $value, true);
@@ -608,7 +608,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
     {
         $changed = array();
         foreach ($this->_currentData as $key => $value) {
-            if (!array_key_exists($key, $this->_originalData) && !empty($value)) {
+            if ((!is_array($this->_originalData) || !array_key_exists($key, $this->_originalData)) && !empty($value)) {
                 $changed[$key] = $value;
             } else if ($this->_originalData[$key] !== $this->_currentData[$key]) {
                 $changed[$key] = $value;
@@ -631,7 +631,7 @@ class Zend_Ldap_Node extends Zend_Ldap_Node_Abstract implements Iterator, Recurs
             'delete'  => array(),
             'replace' => array());
         foreach ($this->_currentData as $key => $value) {
-            if (!array_key_exists($key, $this->_originalData) && !empty($value)) {
+            if ((!is_array($this->_originalData) || !array_key_exists($key, $this->_originalData)) && !empty($value)) {
                 $changes['add'][$key] = $value;
             } else if (count($this->_originalData[$key]) === 0 && !empty($value)) {
                 $changes['add'][$key] = $value;

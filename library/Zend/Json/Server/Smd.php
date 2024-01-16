@@ -440,7 +440,7 @@ class Zend_Json_Server_Smd
                 );
                 $params = array();
                 foreach ($svc->getParams() as $param) {
-                    $paramName = array_key_exists('name', $param) ? $param['name'] : $param['type'];
+                    $paramName = is_array($param) && array_key_exists('name', $param) ? $param['name'] : $param['type'];
                     $params[] = array(
                         'name' => $paramName,
                         'type' => $param['type'],

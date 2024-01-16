@@ -62,7 +62,7 @@ abstract class Zend_Filter_Compress_CompressAbstract implements Zend_Filter_Comp
             return $this->_options;
         }
 
-        if (!array_key_exists($option, $this->_options)) {
+        if (!is_array( $this->_options) || !array_key_exists($option, $this->_options)) {
             return null;
         }
 
