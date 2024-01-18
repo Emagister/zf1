@@ -270,7 +270,7 @@ class Zend_Controller_Router_Route extends Zend_Controller_Router_Route_Abstract
                 $pathPart = urldecode($pathPart);
 
                 // Translate value if required
-                $part = $this->_parts[$pos];
+                $part = $this->_parts[$pos] ?? '';
                 if ($this->_isTranslated
                     && (substr($part, 0, 1) === '@' && substr($part, 1, 1) !== '@'
                         && $name === null)
