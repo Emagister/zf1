@@ -74,7 +74,7 @@ class Zend_Service_Console_Command_ParameterSource_ConfigFile
 		}
 
 		// Parse values
-		$iniValues = parse_ini_file($configurationFilePath);
+		$iniValues = (array) parse_ini_file($configurationFilePath);
 
 		// Default value
 		$parameterValue = null;

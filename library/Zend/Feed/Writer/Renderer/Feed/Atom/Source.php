@@ -99,10 +99,10 @@ class Zend_Feed_Writer_Renderer_Feed_Atom_Source
         $root->appendChild($generator);
         $text = $dom->createTextNode($gdata['name']);
         $generator->appendChild($text);
-        if (array_key_exists('uri', $gdata)) {
+        if (is_array($gdata) && array_key_exists('uri', $gdata)) {
             $generator->setAttribute('uri', $gdata['uri']);
         }
-        if (array_key_exists('version', $gdata)) {
+        if (is_array($gdata) && array_key_exists('version', $gdata)) {
             $generator->setAttribute('version', $gdata['version']);
         }
     }

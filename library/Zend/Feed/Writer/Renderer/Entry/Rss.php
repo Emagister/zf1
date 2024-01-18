@@ -196,7 +196,7 @@ class Zend_Feed_Writer_Renderer_Entry_Rss
         foreach ($authors as $data) {
             $author = $this->_dom->createElement('author');
             $name = $data['name'];
-            if (array_key_exists('email', $data)) {
+            if (is_array($data) && array_key_exists('email', $data)) {
                 $name = $data['email'] . ' (' . $data['name'] . ')';
             }
             $text = $dom->createTextNode($name);

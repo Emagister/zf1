@@ -356,7 +356,7 @@ class Zend_Rest_Route extends Zend_Controller_Router_Route_Module
         if ($this->_fullRestfulModule($moduleName)) {
             return true;
         }
-        if ($this->_restfulControllers && array_key_exists($moduleName, $this->_restfulControllers)) {
+        if ($this->_restfulControllers && is_array($this->_restfulControllers) && array_key_exists($moduleName, $this->_restfulControllers)) {
             return true;
         }
         return false;

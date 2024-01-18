@@ -95,12 +95,14 @@ class Zend_Validate_Ip extends Zend_Validate_Abstract
      */
     public function setOptions($options)
     {
-        if (array_key_exists('allowipv6', $options)) {
-            $this->_options['allowipv6'] = (boolean) $options['allowipv6'];
-        }
+        if(is_array($options)){
+            if (array_key_exists('allowipv6', $options)) {
+                $this->_options['allowipv6'] = (boolean)$options['allowipv6'];
+            }
 
-        if (array_key_exists('allowipv4', $options)) {
-            $this->_options['allowipv4'] = (boolean) $options['allowipv4'];
+            if (array_key_exists('allowipv4', $options)) {
+                $this->_options['allowipv4'] = (boolean)$options['allowipv4'];
+            }
         }
 
         if (!$this->_options['allowipv4'] && !$this->_options['allowipv6']) {

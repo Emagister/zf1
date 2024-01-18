@@ -89,7 +89,7 @@ class Zend_View_Helper_FormCheckbox extends Zend_View_Helper_FormElement
             $xhtml = $this->_hidden($name, $checkedOptions['uncheckedValue']);
         }
 
-        if (array_key_exists('disableHidden', $attribs)) {
+        if (is_array($attribs) && array_key_exists('disableHidden', $attribs)) {
             unset($attribs['disableHidden']);
         }
 

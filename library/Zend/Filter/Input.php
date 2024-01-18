@@ -894,7 +894,7 @@ class Zend_Filter_Input
                 $validatorRule[self::MESSAGES] = array();
 
                 foreach ($validatorList as $key => $validator) {
-                    if (array_key_exists($key, $unifiedMessages)) {
+                    if (is_array($unifiedMessages) && array_key_exists($key, $unifiedMessages)) {
                         $validatorRule[self::MESSAGES][$key] = $unifiedMessages[$key];
                     }
                 }

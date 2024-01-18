@@ -261,7 +261,7 @@ class Zend_Controller_Router_Route_Hostname extends Zend_Controller_Router_Route
 
         // Check if all map variables have been initialized
         foreach ($this->_variables as $var) {
-            if (!array_key_exists($var, $return)) {
+            if (!is_array($return) || !array_key_exists($var, $return)) {
                 return false;
             }
         }

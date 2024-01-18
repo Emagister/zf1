@@ -149,29 +149,30 @@ class Zend_Filter_Inflector implements Zend_Filter_Interface
             $options = $options->toArray();
         }
 
-        // Set Präfix Path
-        if (array_key_exists('filterPrefixPath', $options)) {
-            if (!is_scalar($options['filterPrefixPath'])) {
-                foreach ($options['filterPrefixPath'] as $prefix => $path) {
-                    $this->addFilterPrefixPath($prefix, $path);
+        if(is_array($options)){// Set Präfix Path
+            if (array_key_exists('filterPrefixPath', $options)) {
+                if (!is_scalar($options['filterPrefixPath'])) {
+                    foreach ($options['filterPrefixPath'] as $prefix => $path) {
+                        $this->addFilterPrefixPath($prefix, $path);
+                    }
                 }
             }
-        }
 
-        if (array_key_exists('throwTargetExceptionsOn', $options)) {
-            $this->setThrowTargetExceptionsOn($options['throwTargetExceptionsOn']);
-        }
+            if (array_key_exists('throwTargetExceptionsOn', $options)) {
+                $this->setThrowTargetExceptionsOn($options['throwTargetExceptionsOn']);
+            }
 
-        if (array_key_exists('targetReplacementIdentifier', $options)) {
-            $this->setTargetReplacementIdentifier($options['targetReplacementIdentifier']);
-        }
+            if (array_key_exists('targetReplacementIdentifier', $options)) {
+                $this->setTargetReplacementIdentifier($options['targetReplacementIdentifier']);
+            }
 
-        if (array_key_exists('target', $options)) {
-            $this->setTarget($options['target']);
-        }
+            if (array_key_exists('target', $options)) {
+                $this->setTarget($options['target']);
+            }
 
-        if (array_key_exists('rules', $options)) {
-            $this->addRules($options['rules']);
+            if (array_key_exists('rules', $options)) {
+                $this->addRules($options['rules']);
+            }
         }
 
         return $this;
