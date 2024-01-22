@@ -270,13 +270,14 @@ class Zend_Controller_Router_Route extends Zend_Controller_Router_Route_Abstract
                 $pathPart = urldecode($pathPart);
 
                 // Translate value if required
-                $part = $this->_parts[$pos] ?? '';
+                $part = $this->_parts[$pos];
                 if ($this->_isTranslated
-                    && (substr($part, 0, 1) === '@' && substr($part, 1, 1) !== '@'
+                        && !is_null($part)
+                        && (substr($part, 0, 1) === '@' && substr($part, 1, 1) !== '@'
                         && $name === null)
                     || $name !== null && in_array($name, $this->_translatable)
                 ) {
-                    if (substr($part, 0, 1) === '@') {
+                    if (!is_null($part) && substr($part, 0, 1) === '@') {
                         $part = substr($part, 1);
                     }
 
@@ -285,7 +286,7 @@ class Zend_Controller_Router_Route extends Zend_Controller_Router_Route_Abstract
                     }
                 }
 
-                if (substr($part, 0, 2) === '@@') {
+                if (!is_null($part) && substr($part, 0, 2) === '@@') {
                     $part = substr($part, 1);
                 }
 
@@ -295,7 +296,7 @@ class Zend_Controller_Router_Route extends Zend_Controller_Router_Route_Abstract
                 }
 
                 // If it's a variable with requirement, match a regex. If not - everything matches
-                if ($part !== null
+                if (!is_null($part)
                     && !preg_match(
                         $this->_regexDelimiter . '^' . $part . '$' . $this->_regexDelimiter . 'iu', $pathPart
                     )
