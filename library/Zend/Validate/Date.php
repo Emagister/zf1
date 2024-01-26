@@ -189,7 +189,7 @@ class Zend_Validate_Date extends Zend_Validate_Abstract
 
             list($year, $month, $day) = sscanf($value, '%d-%d-%d');
 
-            if (!checkdate($month, $day, $year)) {
+            if (!checkdate((int) $month, (int) $day, (int) $year)) {
                 $this->_error(self::INVALID_DATE);
                 return false;
             }
