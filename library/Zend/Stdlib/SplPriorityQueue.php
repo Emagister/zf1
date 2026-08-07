@@ -57,10 +57,11 @@ class Zend_Stdlib_SplPriorityQueue extends SplPriorityQueue
      * Utilizes {@var $serial} to ensure that values of equal priority are 
      * emitted in the same order in which they are inserted.
      * 
-     * @param  mixed $datum 
-     * @param  mixed $priority 
+     * @param  mixed $datum
+     * @param  mixed $priority
      * @return bool
      */
+    #[\ReturnTypeWillChange]
     public function insert($datum, $priority)
     {
         // If using the native PHP SplPriorityQueue implementation, we need to
@@ -72,7 +73,7 @@ class Zend_Stdlib_SplPriorityQueue extends SplPriorityQueue
                 $priority = array($priority, $this->serial--);
             }
         }
-        parent::insert($datum, $priority);
+        return parent::insert($datum, $priority);
     }
 
     /**
