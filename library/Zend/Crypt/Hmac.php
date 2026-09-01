@@ -153,7 +153,7 @@ class Zend_Crypt_Hmac extends Zend_Crypt
             return hash_hmac(self::$_hashAlgorithm, $data, self::$_key);
         }
 
-        if (function_exists('mhash')) {
+        if (PHP_VERSION_ID < 80000 && function_exists('mhash')) {
             if ($output == self::BINARY) {
                 return mhash(self::_getMhashDefinition(self::$_hashAlgorithm), $data, self::$_key);
             }
@@ -172,9 +172,12 @@ class Zend_Crypt_Hmac extends Zend_Crypt
      */
     protected static function _getMhashDefinition($hashAlgorithm)
     {
-        for ($i = 0; $i <= mhash_count(); $i++)
-        {
-            $types[mhash_get_hash_name($i)] = $i;
+        $types = array();
+        if (PHP_VERSION_ID < 80000) {
+            for ($i = 0; $i <= mhash_count(); $i++)
+            {
+                $types[mhash_get_hash_name($i)] = $i;
+            }
         }
         return $types[strtoupper($hashAlgorithm)];
     }

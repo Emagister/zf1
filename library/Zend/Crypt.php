@@ -102,7 +102,7 @@ class Zend_Crypt
                return;
             }
         }
-        if (function_exists('mhash')) {
+        if (PHP_VERSION_ID < 80000 && function_exists('mhash')) {
             self::$_type = self::TYPE_MHASH;
             if (in_array($algorithm, self::$_supportedAlgosMhash)) {
                return;
@@ -143,6 +143,10 @@ class Zend_Crypt
      */
     protected static function _digestMhash($algorithm, $data, $binaryOutput)
     {
+        if (PHP_VERSION_ID >= 80000) {
+            require_once 'Zend/Crypt/Exception.php';
+            throw new Zend_Crypt_Exception('mhash is not supported on PHP >= 8.0');
+        }
         $constant = constant('MHASH_' . strtoupper($algorithm));
         $binary = mhash($constant, $data);
         if ($binaryOutput) {

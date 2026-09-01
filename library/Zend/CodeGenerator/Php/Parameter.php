@@ -74,7 +74,8 @@ class Zend_CodeGenerator_Php_Parameter extends Zend_CodeGenerator_Php_Abstract
         $param = new Zend_CodeGenerator_Php_Parameter();
         $param->setName($reflectionParameter->getName());
 
-        if($reflectionParameter->isArray()) {
+        $reflectionParameterType = $reflectionParameter->getType();
+        if ($reflectionParameterType instanceof ReflectionNamedType && $reflectionParameterType->getName() === 'array') {
             $param->setType('array');
         } else {
             $typeClass = $reflectionParameter->getClass();
