@@ -914,11 +914,14 @@ abstract class Zend_Date_DateObject {
     {
         // timestamp within 32bit
         if (abs($this->_unixTimestamp) <= 0x7FFFFFFF) {
+            // 0 is the value of the SUNFUNCS_RET_TIMESTAMP constant, inlined because
+            // referencing that constant is deprecated as of PHP 8.4; date_sun_info()
+            // is not a drop-in replacement since it doesn't support a custom horizon.
             if ($rise === false) {
-                return date_sunset($this->_unixTimestamp, SUNFUNCS_RET_TIMESTAMP, $location['latitude'],
+                return date_sunset($this->_unixTimestamp, 0, $location['latitude'],
                                    $location['longitude'], 90 + $horizon, $this->getGmtOffset() / 3600);
             }
-            return date_sunrise($this->_unixTimestamp, SUNFUNCS_RET_TIMESTAMP, $location['latitude'],
+            return date_sunrise($this->_unixTimestamp, 0, $location['latitude'],
                                 $location['longitude'], 90 + $horizon, $this->getGmtOffset() / 3600);
         }
 

@@ -502,7 +502,7 @@ class Zend_OpenId
         } else if ($func === 'sha1') {
             return sha1($data, true);
         } else if ($func === 'sha256') {
-            if (function_exists('mhash')) {
+            if (PHP_VERSION_ID < 80000 && function_exists('mhash')) {
                 return mhash(MHASH_SHA256 , $data);
             }
         }

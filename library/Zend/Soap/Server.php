@@ -44,6 +44,12 @@ require_once 'Zend/Xml/Exception.php';
 class Zend_Soap_Server implements Zend_Server_Interface
 {
     /**
+     * Value of the ext-soap SOAP_FUNCTIONS_ALL constant, inlined because
+     * referencing that constant is deprecated as of PHP 8.4.
+     */
+    const SOAP_FUNCTIONS_ALL = 999;
+
+    /**
      * Actor URI
      * @var string URI
      */
@@ -545,7 +551,7 @@ class Zend_Soap_Server implements Zend_Server_Interface
     public function addFunction($function, $namespace = '')
     {
         // Bail early if set to SOAP_FUNCTIONS_ALL
-        if ($this->_functions == SOAP_FUNCTIONS_ALL) {
+        if ($this->_functions == self::SOAP_FUNCTIONS_ALL) {
             return $this;
         }
 
@@ -561,8 +567,8 @@ class Zend_Soap_Server implements Zend_Server_Interface
             $this->_functions = array_merge($this->_functions, $function);
         } elseif (is_string($function) && function_exists($function)) {
             $this->_functions[] = $function;
-        } elseif ($function == SOAP_FUNCTIONS_ALL) {
-            $this->_functions = SOAP_FUNCTIONS_ALL;
+        } elseif ($function == self::SOAP_FUNCTIONS_ALL) {
+            $this->_functions = self::SOAP_FUNCTIONS_ALL;
         } else {
             require_once 'Zend/Soap/Server/Exception.php';
             throw new Zend_Soap_Server_Exception('Invalid function specified');
