@@ -375,7 +375,7 @@ class Zend_Barcode_Object_Code128 extends Zend_Barcode_Object_ObjectAbstract
             $sum += ($k++) * $char;
         }
 
-        $checksum = $sum % 103;
+        $checksum = (int) $sum % 103;
 
         return $checksum;
     }

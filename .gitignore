@@ -13,3 +13,5 @@ composer.lock
 bin/dbunit
 bin/phpunit
 .idea/
+phpstan.phar
+phpstan.neon

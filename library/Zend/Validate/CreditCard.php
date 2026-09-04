@@ -289,12 +289,12 @@ class Zend_Validate_CreditCard extends Zend_Validate_Abstract
         $weight = 2;
 
         for ($i = $length - 2; $i >= 0; $i--) {
-            $digit = $weight * $value[$i];
+            $digit = (int) ($weight * $value[$i]);
             $sum += floor($digit / 10) + $digit % 10;
             $weight = $weight % 2 + 1;
         }
 
-        if ((10 - $sum % 10) % 10 != $value[$length - 1]) {
+        if ((10 - (int) $sum % 10) % 10 != $value[$length - 1]) {
             $this->_error(self::CHECKSUM, $value);
             return false;
         }

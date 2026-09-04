@@ -482,7 +482,7 @@ abstract class Zend_Date_DateObject {
                     if ($gmt === true) {
                         $dayseconds += 3600;
                     }
-                    $output .= (int) (($dayseconds % 86400) / 86.4);
+                    $output .= (int) (((int) $dayseconds % 86400) / 86.4);
                     break;
 
                 case 'g':  // hours without leading zeros, 12h format
@@ -917,11 +917,13 @@ abstract class Zend_Date_DateObject {
             // 0 is the value of the SUNFUNCS_RET_TIMESTAMP constant, inlined because
             // referencing that constant is deprecated as of PHP 8.4; date_sun_info()
             // is not a drop-in replacement since it doesn't support a custom horizon.
+            // date_sunset()/date_sunrise() themselves are deprecated as of PHP 8.1 with
+            // no direct replacement for the same reason, so the notice is suppressed here.
             if ($rise === false) {
-                return date_sunset($this->_unixTimestamp, 0, $location['latitude'],
+                return @date_sunset($this->_unixTimestamp, 0, $location['latitude'],
                                    $location['longitude'], 90 + $horizon, $this->getGmtOffset() / 3600);
             }
-            return date_sunrise($this->_unixTimestamp, 0, $location['latitude'],
+            return @date_sunrise($this->_unixTimestamp, 0, $location['latitude'],
                                 $location['longitude'], 90 + $horizon, $this->getGmtOffset() / 3600);
         }
 
