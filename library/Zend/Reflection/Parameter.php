@@ -58,10 +58,11 @@ class Zend_Reflection_Parameter extends ReflectionParameter
      */
     public function getClass($reflectionClass = 'Zend_Reflection_Class')
     {
-        $phpReflection  = parent::getClass();
-        if($phpReflection == null) {
+        $type = $this->getType();
+        if (!$type instanceof ReflectionNamedType || $type->isBuiltin()) {
             return null;
         }
+        $phpReflection = new ReflectionClass($type->getName());
 
         $zendReflection = new $reflectionClass($phpReflection->getName());
         if (!$zendReflection instanceof Zend_Reflection_Class) {

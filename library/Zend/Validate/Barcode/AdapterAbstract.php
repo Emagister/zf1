@@ -218,7 +218,7 @@ abstract class Zend_Validate_Barcode_AdapterAbstract
             }
         }
 
-        $calc     = $sum % 10;
+        $calc     = (int) $sum % 10;
         $checksum = ($calc === 0) ? 0 : (10 - $calc);
         if ($value[$length + 1] != $checksum) {
             return false;
@@ -248,7 +248,7 @@ abstract class Zend_Validate_Barcode_AdapterAbstract
             }
         }
 
-        $calc     = $sum % 10;
+        $calc     = (int) $sum % 10;
         $checksum = ($calc === 0) ? 0 : (10 - $calc);
         if ($value[$length + 1] != $checksum) {
             return false;
@@ -278,7 +278,7 @@ abstract class Zend_Validate_Barcode_AdapterAbstract
             }
         }
 
-        $calc     = $sum % 10;
+        $calc     = (int) $sum % 10;
         $checksum = ($calc === 0) ? 0 : (10 - $calc);
         if ($value[$length + 1] != $checksum) {
             return false;

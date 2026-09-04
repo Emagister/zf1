@@ -183,6 +183,6 @@ class Zend_Barcode_Object_Code39 extends Zend_Barcode_Object_ObjectAbstract
         foreach ($text as $character) {
             $checksum += $charset[$character];
         }
-        return array_search(($checksum % 43), $charset);
+        return array_search(((int) $checksum % 43), $charset);
     }
 }

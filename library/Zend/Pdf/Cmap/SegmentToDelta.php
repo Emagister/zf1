@@ -170,7 +170,7 @@ class Zend_Pdf_Cmap_SegmentToDelta extends Zend_Pdf_Cmap
                 /* This segment uses a simple mapping from character code to
                  * glyph number.
                  */
-                $glyphNumbers[$key] = ($characterCode + $this->_segmentTableIdDeltas[$subtableIndex]) % 65536;
+                $glyphNumbers[$key] = ((int) ($characterCode + $this->_segmentTableIdDeltas[$subtableIndex])) % 65536;
 
             } else {
                 /* This segment relies on the glyph index array to determine the
@@ -234,7 +234,7 @@ class Zend_Pdf_Cmap_SegmentToDelta extends Zend_Pdf_Cmap
         }
 
         if ($this->_segmentTableIdRangeOffsets[$subtableIndex] == 0) {
-            $glyphNumber = ($characterCode + $this->_segmentTableIdDeltas[$subtableIndex]) % 65536;
+            $glyphNumber = ((int) ($characterCode + $this->_segmentTableIdDeltas[$subtableIndex])) % 65536;
         } else {
             $glyphIndex = ($characterCode - $this->_segmentTableStartCodes[$subtableIndex] +
                            $this->_segmentTableIdRangeOffsets[$subtableIndex] - $this->_segmentCount +
@@ -284,7 +284,7 @@ class Zend_Pdf_Cmap_SegmentToDelta extends Zend_Pdf_Cmap
                 for ($code =  $this->_segmentTableStartCodes[$segmentNum];
                      $code <= $this->_segmentTableEndCodes[$segmentNum];
                      $code++) {
-                    $glyphNumbers[$code] = ($code + $delta) % 65536;
+                    $glyphNumbers[$code] = ((int) ($code + $delta)) % 65536;
                 }
             } else {
                 $code       = $this->_segmentTableStartCodes[$segmentNum];

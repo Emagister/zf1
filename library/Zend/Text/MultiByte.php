@@ -110,14 +110,14 @@ class Zend_Text_MultiByte
         if ($padStringLength === 0 || $lengthOfPadding <= 0) {
             $return = $input;
         } else {
-            $repeatCount = floor($lengthOfPadding / $padStringLength);
+            $repeatCount = (int) floor($lengthOfPadding / $padStringLength);
 
             if ($padType === STR_PAD_BOTH) {
                 $lastStringLeft  = '';
                 $lastStringRight = '';
                 $repeatCountLeft = $repeatCountRight = ($repeatCount - $repeatCount % 2) / 2;
 
-                $lastStringLength       = $lengthOfPadding - 2 * $repeatCountLeft * $padStringLength;
+                $lastStringLength       = (int) ($lengthOfPadding - 2 * $repeatCountLeft * $padStringLength);
                 $lastStringLeftLength   = $lastStringRightLength = floor($lastStringLength / 2);
                 $lastStringRightLength += $lastStringLength % 2;
 
@@ -128,7 +128,7 @@ class Zend_Text_MultiByte
                         . $input
                         . str_repeat($padString, $repeatCountRight) . $lastStringRight;
             } else {
-                $lastString = iconv_substr($padString, 0, $lengthOfPadding % $padStringLength, $charset);
+                $lastString = iconv_substr($padString, 0, ((int) $lengthOfPadding) % $padStringLength, $charset);
 
                 if ($padType === STR_PAD_LEFT) {
                     $return = str_repeat($padString, $repeatCount) . $lastString . $input;

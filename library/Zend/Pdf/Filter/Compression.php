@@ -319,8 +319,8 @@ abstract class Zend_Pdf_Filter_Compression implements Zend_Pdf_Filter_Interface
             $predictor == 15     /** Optimal prediction */) {
 
             $bitsPerSample  = $bitsPerComponent*$colors;
-            $bytesPerSample = ceil($bitsPerSample/8);
-            $bytesPerRow    = ceil($bitsPerSample*$columns/8);
+            $bytesPerSample = (int) ceil($bitsPerSample/8);
+            $bytesPerRow    = (int) ceil($bitsPerSample*$columns/8);
             $rows           = ceil(strlen($data)/($bytesPerRow + 1));
             $output         = '';
             $offset         = 0;

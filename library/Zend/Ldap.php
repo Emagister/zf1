@@ -772,10 +772,11 @@ class Zend_Ldap
 
         $this->disconnect();
 
-        /* Only OpenLDAP 2.2 + supports URLs so if SSL is not requested, just
-         * use the old form.
+        /* Passing host and port as separate arguments to ldap_connect() is
+         * deprecated as of PHP 8.3; always connect via the URI form, which
+         * $_connectString already holds regardless of $useUri.
          */
-        $resource = ($useUri) ? @ldap_connect($this->_connectString) : @ldap_connect($host, $port);
+        $resource = @ldap_connect($this->_connectString);
 
         if (is_resource($resource) === true) {
             $this->_resource = $resource;

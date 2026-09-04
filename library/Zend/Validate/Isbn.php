@@ -171,7 +171,7 @@ class Zend_Validate_Isbn extends Zend_Validate_Abstract
                 }
 
                 // checksum
-                $checksum = 11 - ($sum % 11);
+                $checksum = 11 - ((int) $sum % 11);
                 if ($checksum == 11) {
                     $checksum = '0';
                 } elseif ($checksum == 10) {
@@ -191,7 +191,7 @@ class Zend_Validate_Isbn extends Zend_Validate_Abstract
                     }
                 }
                 // checksum
-                $checksum = 10 - ($sum % 10);
+                $checksum = 10 - ((int) $sum % 10);
                 if ($checksum == 10) {
                     $checksum = '0';
                 }

@@ -482,7 +482,7 @@ abstract class Zend_Date_DateObject {
                     if ($gmt === true) {
                         $dayseconds += 3600;
                     }
-                    $output .= (int) (($dayseconds % 86400) / 86.4);
+                    $output .= (int) (((int) $dayseconds % 86400) / 86.4);
                     break;
 
                 case 'g':  // hours without leading zeros, 12h format

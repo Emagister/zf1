@@ -1028,11 +1028,15 @@ class Zend_Soap_Client
      */
     public function _doRequest(Zend_Soap_Client_Common $client, $request, $location, $action, $version, $one_way = null)
     {
-        // Perform request as is
+        // Perform request as is, invoking SoapClient's own __doRequest rather than
+        // $client's overridden one. Calling a method with an alternate class scope via
+        // a "Class::method" callable is deprecated as of PHP 8.2, so use ReflectionMethod
+        // to invoke it directly instead.
+        $doRequest = new ReflectionMethod('SoapClient', '__doRequest');
         if ($one_way == null) {
-            return call_user_func(array($client,'SoapClient::__doRequest'), $request, $location, $action, $version);
+            return $doRequest->invoke($client, $request, $location, $action, $version);
         } else {
-            return call_user_func(array($client,'SoapClient::__doRequest'), $request, $location, $action, $version, $one_way);
+            return $doRequest->invoke($client, $request, $location, $action, $version, $one_way);
         }
     }
 
